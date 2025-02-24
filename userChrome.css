@@ -189,6 +189,9 @@
   /* Menu items */
   --arrowpanel-menuitem-padding-block: 4px !important; /* Default: 8px */
   --arrowpanel-menuitem-padding-inline: 4px !important; /* Default: 8px */
+
+  /* Fonts: Use custom font family, fallback to a generic monospace font if fail */
+  --custom-font: CommitMono Nerd Font, CommitMono Nerd Font Mono, monospace;
 }
 
 /*=====================================================================
@@ -1723,4 +1726,11 @@ mask-composite: intersect;
     background-color: #000;
     font-size: 1.1rem;
   }
+}
+
+/* Set fonts */
+*,
+*::before,
+*::after {
+	font-family: var(--custom-font);
 }
