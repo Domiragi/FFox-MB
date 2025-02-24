@@ -1,0 +1,8 @@
+/* Hide tab bar if there is only 1 tab */
+#tabbrowser-tabs .tabbrowser-tab:only-of-type,
+#tabbrowser-tabs .tabbrowser-tab:only-of-type + #tabbrowser-arrowscrollbox-periphery {
+  display: none !important;
+}
+#tabbrowser-tabs, #tabbrowser-arrowscrollbox {
+  min-height: 0 !important;
+}
