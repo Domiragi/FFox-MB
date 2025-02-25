@@ -564,34 +564,9 @@ about:config -> svg.context-properties.content.enabled -> true*/
   outline-width: 1px !important;
 }
 
-/* Show Tab close button on hover */
-.tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: flex !important;
-  opacity: 0;
-  visibility: collapse !important;
-}
-
-#navigator-toolbox .tabbrowser-tab:not([pinned]):hover .tab-close-button {
-  opacity: 1;
-  visibility: visible !important;
-  border-radius: 100% !important;
-  transition: opacity 0.15s ease, visibility 0.15s ease,
-    background-color 0.15s ease !important;
-}
-
-/* Show Tab close button on hover */
-#navigator-toolbox .tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: flex !important;
-  opacity: 0;
-  visibility: collapse !important;
-}
-
-#navigator-toolbox .tabbrowser-tab:not([pinned]):hover .tab-close-button {
-  opacity: 1;
-  visibility: visible !important;
-  border-radius: 100% !important;
-  transition: opacity 0.15s ease, visibility 0.15s ease,
-    background-color 0.15s ease !important;
+/* Remove close button on tabs */
+#navigator-toolbox .tab-close-button.close-icon {
+    display: none !important;
 }
 
 #tabbrowser-tabs[movingtab]
