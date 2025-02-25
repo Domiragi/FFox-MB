@@ -1,0 +1,94 @@
+/* Show a highlight border around selected tab */
+/* Use 1 of the 2 methods below*/
+
+/********** 1st method **********/
+:root {
+    --tab-border-highlight-selected-color: #06d46d;
+    --tab-border-highlight-multiselected-color: color-mix(in srgb, var(--tab-border-highlight-selected-color) 30%, transparent);;
+    --tab-border-highlight-glow-color: #54d193;
+}
+
+/* Selected tab design */
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-border-highlight-selected-color) !important;
+  box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+}
+
+/* Multiselect tabs */
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected] {
+  border: 1.5px solid var(--tab-border-highlight-multiselected-color) !important;
+}
+
+/* Multiselect tabs on hover */
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:hover .tab-background[multiselected] {
+  border: 1.5px solid var(--tab-border-highlight-multiselected-color) !important;
+}
+
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 2px solid var(--tab-border-highlight-selected-color) !important;
+  box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+}
+
+/********** 2nd method **********/
+/* - This allows the highlight border to be a gradient since `border` can't use gradient color yet
+ * - The drawback of this method is that the values below are hand-tested and independent of the
+ * values for tab which are set in the main `userChrome.css` file. Reason for this is I'm not familiar
+ * with CSS, that's all.
+ * - Another drawback is that when the tab width gets extremely close to the current tab-min-width (45px)
+ * because the number of tabs increase, the right side of the border get slightly thicker than the other
+ * edges of the border.
+ *
+ * :root {
+ *     --tab-border-highlight-selected-color: linear-gradient(45deg, rgb(6, 212, 109), rgb(251, 146, 0)) !important;
+ *     --tab-border-highlight-multiselected-color: color-mix(in srgb, var(--tab-border-highlight-selected-color) 30%, transparent);;
+ *     --tab-border-highlight-glow-color: #54d193;
+ * }
+ *
+ * [> Selected tab design <]
+ * .tabbrowser-tab[selected] > .tab-stack::before{
+ *   content: "";
+ *   border-radius: 11.5px;
+ *   grid-area: 1/1;
+ *   margin-top: 2px !important;
+ *   margin-bottom: 4px !important;
+ *   margin-left: -2px !important;
+ *   margin-right: -2.5px !important;
+ *   background: var( --identity-tab-color, var(--tab-border-highlight-selected-color)) !important;
+ *   box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+ * }
+ *
+ * [> Multiselect tabs <]
+ * .tabbrowser-tab[multiselected] > .tab-stack::before{
+ *   content: "";
+ *   border-radius: 11.5px;
+ *   grid-area: 1/1;
+ *   margin-top: 2.5px !important;
+ *   margin-bottom: 4.5px !important;
+ *   margin-left: -2.5px !important;
+ *   margin-right: -3px !important;
+ *   background: var( --identity-tab-color, var(--tab-border-highlight-multiselected-color)) !important;
+ * }
+ *
+ * [> Multiselect tabs on hover <]
+ * .tabbrowser-tab:is(:hover):is([multiselected]) > .tab-stack::before{
+ *   content: "";
+ *   border-radius: 11.5px;
+ *   grid-area: 1/1;
+ *   margin-top: 2.5px !important;
+ *   margin-bottom: 4.5px !important;
+ *   margin-left: -2.5px !important;
+ *   margin-right: -3px !important;
+ *   background: var( --identity-tab-color, var(--tab-border-highlight-multiselected-color)) !important;
+ * }
+ * 
+ * .tabbrowser-tab:is([selected]):is([multiselected]) > .tab-stack::before{
+ *   content: "";
+ *   border-radius: 11.5px;
+ *   grid-area: 1/1;
+ *   margin-top: 2px !important;
+ *   margin-bottom: 4px !important;
+ *   margin-left: -2px !important;
+ *   margin-right: -2.5px !important;
+ *   background: var( --identity-tab-color, var(--tab-border-highlight-selected-color)) !important;
+ *   box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+ * } */
