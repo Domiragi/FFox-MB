@@ -50,12 +50,12 @@
     --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
 
     /* Tab colors */
-    --firefoxcss-tab-bg-color: hsl(240, 2%, 26%);
+    --firefoxcss-tab-bg-color: hsl(240, 2%, 13%);
     --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 32%);
-    --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-tab-active-bg-color: hsl(240, 2%, 32%);
     --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.65);
 
-    --firefoxcss-normal-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
+    --firefoxcss-select-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
     --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.1);
 
     /* Tab playing audio speaker icon colors */
@@ -520,7 +520,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   background-image: none !important;
   background-color: var(--firefoxcss-tab-bg-color) !important;
   transition: background-color 100ms ease !important;
-  box-shadow: var(--firefoxcss-normal-tabs-box-shadow) !important;
+  box-shadow: none !important;
 }
 
 /* Normal tabs design on hover */
@@ -532,7 +532,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
   background-color: var(--firefoxcss-tab-hover-bg-color) !important;
-  box-shadow: var(--firefoxcss-normal-tabs-box-shadow) !important;
+  box-shadow: var(--firefoxcss-select-tabs-box-shadow) !important;
 }
 
 /* Selected tabs design */
@@ -541,7 +541,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
   background-color: var(--firefoxcss-tab-active-bg-color) !important;
-  box-shadow: none !important;
+  box-shadow: var(--firefoxcss-select-tabs-box-shadow) !important;
   outline: none !important;
 }
 
