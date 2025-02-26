@@ -164,7 +164,7 @@
 :root {
   --firefoxcss-top-bar-border-bottom-size: 1px;
   --firefoxcss-border-radius: 10px;
-  --firefoxcss-control-buttons-margin: 100px;
+  --firefoxcss-control-buttons-margin: 0px;
   --firefoxcss-tab-min-width: 45px;
   --firefoxcss-tab-max-width: 150px;
 
@@ -726,99 +726,19 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
 /* :root[sizemode="fullscreen"] #navigator-toolbox { position: relative; } */
 
-@media (-moz-platform: windows) {
-  /* ----- Close/min/max fix ----- */
-  #TabsToolbar .titlebar-buttonbox-container,
-  #nav-bar .titlebar-buttonbox-container{
-    padding-top: 3px !important;
-    padding-bottom: 3px !important;
-    padding-right: 3px !important;
-    padding-left: 3px !important;
-  }
+/* Hide window control buttons */
+.titlebar-buttonbox-container {
+  display: none !important;
+}
 
-  .titlebar-buttonbox-container .titlebar-button > .toolbarbutton-icon {
-    height: 12px !important;
-    min-height: 12px !important;
-    width: 12px !important;
-    min-width: 12px !important;
-  }
+/* Add spacing for left most button */
+#nav-bar {
+  padding-left: 2px !important;
+}
 
-  .titlebar-buttonbox-container .titlebar-button {
-    border-radius: var(--toolbarbutton-border-radius);
-    padding: 10px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-  }
-
-  @media not (-moz-bool-pref: "firefoxcss.tabs.on.top.enable") {
-    #toolbar-menubar .titlebar-button {
-      padding-block: 0px !important;
-    }
-    
-     #nav-bar-customization-target
-        > :is(toolbarbutton, toolbaritem):first-child {
-        padding-inline-start: 2px !important;
-    }
-    
-     :root[sizemode="maximized"] .titlebar-buttonbox-container {
-        padding-top: 0px !important;
-      }
-    
-    #navigator-toolbox[inFullscreen] #nav-bar {
-        padding-right: initial !important;
-      }
-
-    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
-     
-
-      #nav-bar {
-        padding-right: var(--firefoxcss-control-buttons-margin) !important;
-      }
-
-      #navigator-toolbox:not([inFullscreen])
-        #TabsToolbar
-        .titlebar-buttonbox-container {
-        visibility: visible !important;
-        display: flex !important;
-        position: absolute !important;
-        top: 1px;
-        right: 0;
-      }
-
-
-      .titlebar-buttonbox-container .titlebar-min {
-        order: 0 !important;
-      }
-
-      .titlebar-buttonbox-container .titlebar-max,
-      .titlebar-restore {
-        order: 1 !important;
-      }
-
-      .titlebar-buttonbox-container .titlebar-close {
-        order: 2 !important;
-      }
-
-      @media only screen and (max-width: 670px) {
-        #navigator-toolbox:not([inFullscreen])
-          #TabsToolbar
-          .titlebar-buttonbox-container {
-          visibility: visible !important;
-          display: flex !important;
-          position: relative !important;
-          order: 1 !important;
-          padding-top: 1px !important;
-          padding-bottom: 1px !important;
-        }
-
-        #navigator-toolbox:not([inFullscreen]) #nav-bar {
-          padding-right: initial !important;
-        }
-      }
-    }
-  }
+/* Pad the Main Menu (hamburger) button */
+#nav-bar #PanelUI-button #PanelUI-menu-button {
+  padding-right: 4px !important;
 }
 
 /*=====================================================================
