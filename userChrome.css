@@ -1,11 +1,11 @@
-/* ______ _           __             __  __           _   ____  _     _    _ _____  
-  |  ____(_)         / _|           |  \/  |         | | |  _ \| |   | |  | |  __ \ 
+/* ______ _           __             __  __           _   ____  _     _    _ _____
+  |  ____(_)         / _|           |  \/  |         | | |  _ \| |   | |  | |  __ \
   | |__   _ _ __ ___| |_ _____  __  | \  / | ___   __| | | |_) | |   | |  | | |__) |
-  |  __| | | '__/ _ \  _/ _ \ \/ /  | |\/| |/ _ \ / _` | |  _ <| |   | |  | |  _  / 
-  | |    | | | |  __/ || (_) >  <   | |  | | (_) | (_| | | |_) | |___| |__| | | \ \ 
+  |  __| | | '__/ _ \  _/ _ \ \/ /  | |\/| |/ _ \ / _` | |  _ <| |   | |  | |  _  /
+  | |    | | | |  __/ || (_) >  <   | |  | | (_) | (_| | | |_) | |___| |__| | | \ \
   |_|    |_|_|  \___|_| \___/_/\_\  |_|  |_|\___/ \__,_| |____/|______\____/|_|  \_\
-  
-                                                                                    
+
+
   Github:         github.com/datguypiko/Firefox-Mod-Blur     */
 
 /*===============================================================
@@ -44,11 +44,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Main dark color, url bar, active tab etc. */
-    --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
+    /* Main color for background */
+    --firefoxcss-main-bg-color: hsl(240, 2%, 20%);
 
-    /* Main lighter color, toolbar background */
-    --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
+    /* Secondary color for url bar, active tab etc. */
+    --firefoxcss-secondary-bg-color: hsl(240, 2%, 13%);
 
     /* Tab colors */
     --firefoxcss-tab-bg-color: hsl(240, 2%, 13%);
@@ -71,7 +71,7 @@
     --firefoxcss-bookmarks-bg-color: hsl(240, 2%, 13%);
 
     /* Change background color when loading a page */
-    --firefoxcss-bright-flash-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-bright-flash-color: var(--firefoxcss-secondary-bg-color);
 
     /* Toolbar buttons */
     --firefoxcss-toolbar-button-box-shadow: rgba(0, 0, 0, 0.3);
@@ -86,17 +86,17 @@
      /* Search Bar and breakout (when in focus) colors */
      --firefoxcss-url-dark-border: color-mix(
       in srgb,
-      var(--firefoxcss-main-bg-color) 35%,
+      var(--firefoxcss-secondary-bg-color) 35%,
       black
     );
     --firefoxcss-url-breakout-border-bottom-color: 1px solid
       color-mix(in srgb, var(--firefoxcss-url-dark-border) 25%, transparent);
-    
+
     --firefoxcss-url-breakout-border-top-color: 1px solid transparent;
-    --firefoxcss-url-bar-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-url-bar-bg-color: var(--firefoxcss-secondary-bg-color);
     --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 0.2);
     --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0.15);
-    --firefoxcss-url-breakout-bar-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-url-breakout-bar-bg-color: var(--firefoxcss-secondary-bg-color);
     --firefoxcss-url-box-shadow-color: 0px 1px 0 0px hsla(0, 0%, 100%, 0.1),
     inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25) !important;
     --firefoxcss-url-autocomplete-highlight: hsl(240, 2%, 26%);
@@ -117,16 +117,16 @@
     --firefoxcss-private-browsing-drop-shadow: drop-shadow(
       0px 0px 1px #000000d5
     );
-    --firefoxcss-statuspanel-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-statuspanel-bg-color: var(--firefoxcss-secondary-bg-color);
     --firefoxcss-contextmenu-hover-text: white;
     --firefoxcss-customize-view-dashed-outline: hsla(0, 0%, 100%, 0.25);
     --firefoxcss-customize-view-flex-space: #d0ba9e;
     --firefoxcss-customize-view-overflow-menu: hsl(240, 2%, 10%);
 
     /* ============== Firefox Global colors change ==================== */
-    --toolbar-bgcolor: var(--firefoxcss-item-bg-color) !important;
-    --arrowpanel-background: var(--firefoxcss-main-bg-color) !important;
-     --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35)!important;  
+    --toolbar-bgcolor: var(--firefoxcss-main-bg-color) !important;
+    --arrowpanel-background: var(--firefoxcss-secondary-bg-color) !important;
+     --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35)!important;
     --toolbarbutton-active-background: hsla(0, 0%, 80%, 0.35) !important;
     --button-hover-bgcolor: hsla(0, 0%, 60%, 0.35) !important;
     --button-active-bgcolor: hsla(0, 0%, 45%, 0.35) !important;
@@ -144,7 +144,7 @@
     ) !important;
     --panel-separator-color: var(--arrowpanel-border-color) !important;
     --panel-separator-zap-gradient: var(--panel-separator-color) !important;
-    --lwt-sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
+    --lwt-sidebar-background-color: var(--firefoxcss-secondary-bg-color) !important;
     --urlbarView-highlight-background: hsl(240, 2%, 20%) !important;
     --urlbarView-hover-background: color-mix(
       in srgb,
@@ -174,7 +174,7 @@
     var(--firefoxcss-border-radius) - 2px
   ) !important;
   @media not (-moz-bool-pref: "sidebar.verticalTabs") {
-    
+
     --tab-block-margin: 2px !important;
     /* Default: 4px */
 
@@ -230,7 +230,7 @@ Order of Toolbars
 
 /* Sidebar background color change */
 #browser #sidebar-box {
-  --sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
+  --sidebar-background-color: var(--firefoxcss-secondary-bg-color) !important;
 }
 
 /* Bookmarks bar background color */
@@ -246,7 +246,7 @@ Order of Toolbars
 
 /* Whole Main Toolbar */
 #navigator-toolbox {
-  background-color: var(--firefoxcss-item-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
 /* Fix some custom firefox themes that break */
@@ -267,11 +267,11 @@ Order of Toolbars
 /* CTRL+F Search Bar color changes  */
 .browserContainer > findbar {
   background-image: none !important;
-  background-color: var(--firefoxcss-main-bg-color) !important;
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
 }
 
 .browserContainer > findbar .findbar-textbox {
-  background-color: var(--firefoxcss-item-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
 /*=====================================================================
@@ -366,7 +366,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   font-size: 1.1rem !important;
 }
 
-/* Styling Search Containers 
+/* Styling Search Containers
     #urlbar-background - main search container
     #searchbar - secondary/extra search container */
 #urlbar-background,
@@ -586,7 +586,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     &:is([soundplaying], [muted], [activemedia-blocked]) {
       top: unset !important;
       inset-inline-end: unset !important;
-      transform: translate(50%,-50%); 
+      transform: translate(50%,-50%);
     }
   }
 } */
@@ -625,7 +625,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     &:is([soundplaying], [muted], [activemedia-blocked]) {
       top: unset !important;
       inset-inline-end: unset !important;
-      transform: translate(50%,-50%); 
+      transform: translate(50%,-50%);
     }
   }
 } */
@@ -689,7 +689,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     min-width: 150px !important;
   }
 
-  /* 
+  /*
  * Fix the height of the tab because if you
  * change --tab-min-height it doesnt work for fullcreen
  */
@@ -816,7 +816,7 @@ menuseparator#context-sep-navigation {
 /* ----- Menu Colors -- border - rgba(82, 82, 94, 0.31) ----- */
 :not(#ContentSelectDropdown) > menupopup {
   --panel-border-color: var(--arrowpanel-border-color) !important;
-  --panel-background: var(--firefoxcss-main-bg-color) !important;
+  --panel-background: var(--firefoxcss-secondary-bg-color) !important;
   --panel-padding: 2px 0 2px !important;
   --panel-border-radius: 8px !important;
 }
@@ -1000,7 +1000,7 @@ toolbar
 
 #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon {
   background-image: none !important;
-  background-color: var(--firefoxcss-main-bg-color) !important;
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
   border-radius: var(--firefoxcss-border-radius) !important;
   box-shadow: none !important;
 }
@@ -1039,8 +1039,8 @@ toolbar
 =====================================================================*/
 
 @media not (-moz-bool-pref: "mod.search.info.buttons.show.always") {
-  /* - [persistsearchterms] - 
-     Used when "Show search terms instead of URL on 
+  /* - [persistsearchterms] -
+     Used when "Show search terms instead of URL on
      default search engine results page" enabled.
      When you search a globe icon shows up to show full url */
 
@@ -1107,7 +1107,7 @@ toolbar
     margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
     transition: margin-inline-start 100ms linear, opacity 200ms linear;
   }
-  
+
   #identity-box:hover #identity-icon-box,
   #identity-box:hover #identity-permission-box,
   #identity-box #identity-permission-box[open="true"],
@@ -1116,23 +1116,23 @@ toolbar
     margin-inline-start: initial !important;
   }
    */
-  
+
   .urlbar-page-action, .urlbar-revert-button, .urlbar-go-button, .search-go-button {
   &:not([disabled]):hover {
     background-color: var(--toolbarbutton-hover-background) !important;
   }
 }
-  
+
   .identity-box-button, #tracking-protection-icon-container {
     &:hover:not([open="true"]) {
        background-color: var(--toolbarbutton-hover-background) !important;
     }
   }
-  
-  
+
+
   #urlbar-label-box,
   #urlbar-zoom-button {
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-main-bg-color) !important;
   }
 
   #urlbar-zoom-button:hover {
@@ -1179,7 +1179,7 @@ toolbar
         margin-inline-start: initial !important;
         opacity: 1 !important;
         color: #e36f6f !important;
-        background-color: var(--firefoxcss-item-bg-color) !important;
+        background-color: var(--firefoxcss-main-bg-color) !important;
 
         &:hover:not([open]) {
           background-color: var(--firefoxcss-urlbar-zoom-button) !important;
@@ -1206,7 +1206,7 @@ toolbar
     > #identity-icon-box {
     margin-inline-start: initial !important;
     opacity: 1 !important;
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-main-bg-color) !important;
 
     &:hover:not([open]) {
       background-color: var(--firefoxcss-urlbar-zoom-button) !important;
@@ -1232,12 +1232,12 @@ toolbar
     mask-image: linear-gradient(to right, transparent, black 3ch), linear-gradient(to left, transparent, black 3ch) !important;
 mask-composite: intersect;
   }
-  
+
   #tracking-protection-icon-container:hover ~ .urlbar-input-box > #urlbar-input {
      mask-image: linear-gradient(to right, transparent, black 3ch), linear-gradient(to left, transparent, black 3ch) !important;
 mask-composite: intersect;
   }
-  
+
 
   #urlbar:is(:not([usertyping]), :not([focused])):not([persistsearchterms])
     #page-action-buttons {
@@ -1257,27 +1257,27 @@ mask-composite: intersect;
     transition: margin-inline-end 150ms ease-in-out,
         opacity 100ms ease-in-out;
   }
-  
-  
+
+
     #page-action-buttons:not(:hover)
     #translations-button[translationsactive="true"]:not([open]) {
 /*     visibility: collapse !important; */
   }
-  
+
   #translations-button-locale {
     color:white !important;
   }
-  
+
   #page-action-buttons #translations-button[translationsactive="true"] {
     margin-inline-end: initial !important;
     opacity: 1 !important;
   }
-  
+
    #page-action-buttons #reader-mode-button[readeractive] {
     margin-inline-end: initial !important;
     opacity: 1 !important;
   }
-  
+
 
   #page-action-buttons:hover > .urlbar-page-action,
   #page-action-buttons .urlbar-page-action[open],
@@ -1286,7 +1286,7 @@ mask-composite: intersect;
     margin-inline-end: initial !important;
     transition: margin-inline-end 100ms ease, opacity 100ms ease;
   }
-  
+
   /* Create visual dots on both sides */
   /* left side identity-box dots modification dark color %23FFFFFF*/
   #urlbar:is(:not([usertyping]), :not([focused])):not([persistsearchterms])
@@ -1306,15 +1306,15 @@ mask-composite: intersect;
     /*    background-image: url('ASSETS/svg/dots-three-outline-vertical-fill-svgrepo-com.svg');
    background-size: 14px 14px;
     background-repeat: no-repeat;
-  
-      */ /*! width:14px; */ /* 
+
+      */ /*! width:14px; */ /*
       height: 14px;
       content:""; */
 
     /*   -moz-context-properties: fill, fill-opacity;
     fill: currentColor; */
   }
- 
+
 
   #identity-box::after,
   #page-action-buttons::before {
@@ -1365,15 +1365,15 @@ mask-composite: intersect;
 
   /* Search button show on hover in URL bar. */
   /* #urlbar-container:not(:hover) #urlbar:not(.searchButton):not([focused])
-    > .urlbar-input-container > 
+    > .urlbar-input-container >
     #identity-box[pageproxystate="invalid"] #identity-icon {
-      opacity: 0 !important; 
+      opacity: 0 !important;
     }
-    
+
     #urlbar-container #urlbar:not(.searchButton)
-    > .urlbar-input-container > 
+    > .urlbar-input-container >
     #identity-box[pageproxystate="invalid"] #identity-icon {
-      opacity: 1 !important; 
+      opacity: 1 !important;
       visibility: visible !important;
       transition: opacity 0.2s ease;
     } */
@@ -1401,7 +1401,7 @@ mask-composite: intersect;
   }
 
   /*   menupopup > :-moz-any(menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"]) {
-      background-color: color-mix(in srgb, currentColor 9%, transparent) !important;   
+      background-color: color-mix(in srgb, currentColor 9%, transparent) !important;
       } */
 
   menu:where([_moz-menuactive="true"]):not([disabled]),
@@ -1518,7 +1518,7 @@ mask-composite: intersect;
 /* Customize toolbar background color */
 #customization-container {
   background-image: none !important;
-  background-color: var(--firefoxcss-main-bg-color) !important;
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
 }
 
 #PersonalToolbar[customizing]
@@ -1543,7 +1543,7 @@ mask-composite: intersect;
 }
 
 .browserContainer > findbar .findbar-textbox {
-  background-color: var(--firefoxcss-item-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
 #customization-container #customization-footer {

@@ -3,30 +3,30 @@
 
 /********** 1st method **********/
 :root {
-    --tab-border-highlight-selected-color: #06d46d;
-    --tab-border-highlight-multiselected-color: color-mix(in srgb, var(--tab-border-highlight-selected-color) 30%, transparent);;
-    --tab-border-highlight-glow-color: #54d193;
+    --firefoxcss-tab-border-highlight-selected-color: #06d46d;
+    --firefoxcss-tab-border-highlight-multiselected-color: color-mix(in srgb, var(--firefoxcss-tab-border-highlight-selected-color) 30%, transparent);;
+    --firefoxcss-tab-border-highlight-glow-color: #54d193;
 }
 
 /* Selected tab design */
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background[selected] {
-  border: 2px solid var(--tab-border-highlight-selected-color) !important;
-  box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+  border: 2px solid var(--firefoxcss-tab-border-highlight-selected-color) !important;
+  box-shadow: 0 0 4px var(--firefoxcss-tab-border-highlight-glow-color) !important;
 }
 
 /* Multiselect tabs */
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected] {
-  border: 1.5px solid var(--tab-border-highlight-multiselected-color) !important;
+  border: 1.5px solid var(--firefoxcss-tab-border-highlight-multiselected-color) !important;
 }
 
 /* Multiselect tabs on hover */
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:hover .tab-background[multiselected] {
-  border: 1.5px solid var(--tab-border-highlight-multiselected-color) !important;
+  border: 1.5px solid var(--firefoxcss-tab-border-highlight-multiselected-color) !important;
 }
 
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
-  border: 2px solid var(--tab-border-highlight-selected-color) !important;
-  box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+  border: 2px solid var(--firefoxcss-tab-border-highlight-selected-color) !important;
+  box-shadow: 0 0 4px var(--firefoxcss-tab-border-highlight-glow-color) !important;
 }
 
 /********** 2nd method **********/
@@ -39,9 +39,9 @@
  * edges of the border.
  *
  * :root {
- *     --tab-border-highlight-selected-color: linear-gradient(45deg, rgb(6, 212, 109), rgb(251, 146, 0)) !important;
- *     --tab-border-highlight-multiselected-color: color-mix(in srgb, var(--tab-border-highlight-selected-color) 30%, transparent);;
- *     --tab-border-highlight-glow-color: #54d193;
+ *     --firefoxcss-tab-border-highlight-selected-color: linear-gradient(45deg, rgb(6, 212, 109), rgb(251, 146, 0)) !important;
+ *     --firefoxcss-tab-border-highlight-multiselected-color: color-mix(in srgb, var(--firefoxcss-tab-border-highlight-selected-color) 30%, transparent);;
+ *     --firefoxcss-tab-border-highlight-glow-color: #54d193;
  * }
  *
  * [> Selected tab design <]
@@ -53,8 +53,8 @@
  *   margin-bottom: 4px !important;
  *   margin-left: -2px !important;
  *   margin-right: -2.5px !important;
- *   background: var( --identity-tab-color, var(--tab-border-highlight-selected-color)) !important;
- *   box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+ *   background: var( --identity-tab-color, var(--firefoxcss-tab-border-highlight-selected-color)) !important;
+ *   box-shadow: 0 0 4px var(--firefoxcss-tab-border-highlight-glow-color) !important;
  * }
  *
  * [> Multiselect tabs <]
@@ -66,7 +66,7 @@
  *   margin-bottom: 4.5px !important;
  *   margin-left: -2.5px !important;
  *   margin-right: -3px !important;
- *   background: var( --identity-tab-color, var(--tab-border-highlight-multiselected-color)) !important;
+ *   background: var( --identity-tab-color, var(--firefoxcss-tab-border-highlight-multiselected-color)) !important;
  * }
  *
  * [> Multiselect tabs on hover <]
@@ -78,7 +78,7 @@
  *   margin-bottom: 4.5px !important;
  *   margin-left: -2.5px !important;
  *   margin-right: -3px !important;
- *   background: var( --identity-tab-color, var(--tab-border-highlight-multiselected-color)) !important;
+ *   background: var( --identity-tab-color, var(--firefoxcss-tab-border-highlight-multiselected-color)) !important;
  * }
  * 
  * .tabbrowser-tab:is([selected]):is([multiselected]) > .tab-stack::before{
@@ -89,6 +89,6 @@
  *   margin-bottom: 4px !important;
  *   margin-left: -2px !important;
  *   margin-right: -2.5px !important;
- *   background: var( --identity-tab-color, var(--tab-border-highlight-selected-color)) !important;
- *   box-shadow: 0 0 4px var(--tab-border-highlight-glow-color) !important;
+ *   background: var( --identity-tab-color, var(--firefoxcss-tab-border-highlight-selected-color)) !important;
+ *   box-shadow: 0 0 4px var(--firefoxcss-tab-border-highlight-glow-color) !important;
  * } */
