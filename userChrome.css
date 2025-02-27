@@ -669,6 +669,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
   #tabbrowser-tabs {
     margin-left: 2px !important;
+    margin-right: 2px !important;
   }
 
   /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
