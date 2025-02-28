@@ -1,0 +1,421 @@
+/*********************************************************************************************
+  simpleMenuWizard: userChrome.css tweaks to remove context menu items in Firefox.
+  https://github.com/stonecrusher/simpleMenuWizard
+*********************************************************************************************/
+
+/*********************************** blank-context.css **************************************/
+/*** When right-clicking on a blank area on a webpage ***/
+
+ #context-navigation,             /* Hide whole navigation bar            */
+/* #context-back,                     /* Navi: Back arrow                     */
+/* #context-forward,                  /* Navi: Forward arrow                  */
+/* #context-reload,                   /* Navi: Reload icon -
+                                           combined position with stop icon   */
+/* #context-stop,                     /* Navi: Stop icon (x) -
+                                           combined position with reload icon */
+/* #context-bookmarkpage,             /* Navi: Bookmark star icon             */
+ #context-sep-navigation,         /************** Separator ***************/
+ #context-savepage,               /* Save Page As...                      */
+ #context-pocket,                 /* Save Page to Pocket                  */
+ #context-selectall,              /* Select All                           */
+ #context-sep-selectall,          /************** Separator ***************/
+/* #context-take-screenshot,        /* Take Screenshot                      */
+ #context-sep-screenshots,        /************** Separator ***************/
+/* #context-viewsource,             /* View Page Source                     */
+/* #context-inspect,                /* Inspect (Q)                          */
+/* #context-media-eme-separator,    /************** Separator ***************/
+/* Here are context menus of addons */
+
+/*********************************** image-context.css **************************************/
+/*** When right-clicking on an image ***/
+
+/* #context-reloadimage,             /* Reload Image                    */
+/* #context-viewimage,               /* Open Image in New Tab           */
+/* #context-saveimage,               /* Save Image As…                  */
+/* #context-copyimage-contents,      /* Copy Image                      */
+/* #context-copyimage,               /* Copy Image Link                 */
+ #context-sendimage,               /* Email Image…                    */
+ #context-sep-setbackground,       /************ Separator ************/
+ #context-setDesktopBackground,    /* Set As Desktop Background...    */
+/* #context-sep-sharing,             /************ Separator ************/
+/* #context-inspect,                 /* Inspect (Q)                     */
+
+/*********************************** input-context.css **************************************/
+/*** When right-clicking on an input-field ***/
+
+ #fill-login,                            /* Use Saved Login                  */
+ #fill-login-generated-password,         /* Suggest Strong Password…         */
+ #manage-saved-logins,                   /* Manage Logins                    */
+/* #passwordmgr-items-separator,           /************ Separator *************/
+/* #spell-no-suggestions,                  /* (No Spelling Suggestions)        */
+/* menuitem.spell-suggestion,              /* ~ List of spelling suggestions ~ */
+/* #spell-add-to-dictionary,               /* Add To Dictionary                */
+/* #spell-undo-add-to-dictionary,          /* Undo Add To Dictionary           */
+ #spell-suggestions-separator,           /************ Separator *************/
+ #context-undo,                          /* Undo                             */
+ #context-redo,                          /* Redo                             */
+ #context-sep-redo,                      /************ Separator *************/
+ #context-cut,                           /* Cut                              */
+ #context-copy,                          /* Copy                             */
+ #context-paste,                         /* Paste                            */
+ #context-delete,                        /* Delete                           */
+ #context-selectall,                     /* Select All                       */
+/* #context-sep-selectall,                 /************ Separator *************/
+/* #context-keywordfield,                  /* Add a Keyword for this Search…   */
+/* #spell-separator,                       /************ Separator *************/
+/* #spell-check-enabled,                   /* Check Spelling                   */
+/* #spell-dictionaries,                    /* Languages                        */
+/* #spell-check-dictionary-en-US,              /* English (United States)          */
+/* #spell-language-separator,                  /************ Separator *************/
+/* #spell-add-dictionaries-main,               /* Add Dictionaries…                */
+/* #context-sep-bidi,                      /************ Separator *************/
+/* #context-bidi-text-direction-toggle,    /* Switch Text Direction            */
+/* #context-bidi-page-direction-toggle,    /* Switch Page Direction            */
+ #fill-login-separator,                  /************ Separator *************/
+ #fill-login,                            /* Fill Login                       */
+/* #inspect-separator,                     /************ Separator *************/
+/* #context-inspect,                       /* Inspect (Q)                      */
+
+/************************************ link-context.css **************************************/
+/*** When right-clicking on a link ***/
+
+ #context-openlinkintab,                 /* Open Link in New Tab             */
+ #context-openlinkinusercontext-menu,    /* Open Link in New Container Tab   */
+/* #context-openlink,                      /* Open Link in New Window          */
+/* #context-openlinkprivate,               /* Open Link in New Private Window  */
+/* #context-sep-open,                      /************ Separator *************/
+ #context-bookmarklink,                  /* Bookmark Link                    */
+ #context-savelink,                      /* Save Link As…                    */
+ #context-savelinktopocket,              /* Save Link to Pocket              */
+ #context-copyemail,                     /* Copy Email Address               */
+/* #context-copylink,                      /* Copy Link                        */
+/* #context-stripOnShareLink,              /* Copy Link Without Site Tracking  */
+ #context-sendlinktodevice,              /* Send Link to Device              */
+ #context-sep-sendlinktodevice,          /************ Separator *************/
+/* #context-sep-copylink,                  /************ Separator *************/
+/* #context-searchselect,                  /* Search [Google] for "[selected]" */
+/* #frame-sep,                             /************ Separator *************/
+/* #context-inspect,                       /* Inspect (Q)                      */
+
+
+/************************************ main-hamburger.css ************************************/
+/*** When left-clicking on the hamburger menu on top right ***/
+
+/* #appMenu-proton-update-banner,                     /* Downloading Firefox update /
+                                                         Update available — download now /
+                                                         Unable to update — system incompatible /
+                                                         Update available — restart now */
+/* #appMenu-fxa-status2,                              /* Sync and save data / Sign In  */
+/* #appMenu-fxa-separator,                            /*********** Separator ***********/
+ #appMenu-new-tab-button2,                          /* New Tab                       */
+ #appMenu-new-window-button2,                       /* New Window                    */
+ #appMenu-new-private-window-button2,               /* New Private Window            */
+ #appMenu-new-private-window-button2
+       + toolbarseparator,                            /*********** Separator ***********/
+/* #appMenu-bookmarks-button,                         /* Bookmarks                     */
+ #panelMenuBookmarkThisPage,                            /* Bookmark Current Tab          */
+ #panelMenu_searchBookmarks,                            /* Search Bookmarks              */
+ #panelMenu_viewBookmarksToolbar,                       /* Show Bookmarks Toolbar        */
+ #panelMenu_viewBookmarksToolbar + toolbarseparator,    /*********** Separator ***********/
+/* #panelMenu_recentBookmarks,                            /* Recent Bookmarks (label)      */
+/* #panelMenu_bookmarksMenu,                              /* Recent Bookmarks (list)       */
+/* #panelMenu_showAllBookmarks,                           /* Manage Bookmarks              */
+/* #appMenu-history-button,                           /* History                       */
+/* #appMenuRecentlyClosedTabs,                            /* Recently Closed Tabs          */
+/* #appMenu-library-recentlyClosedTabs > .restoreallitem,     /* Reopen All Tabs               */
+/* #appMenuRecentlyClosedWindows,                         /* Recently Closed Windows       */
+/* #appMenuRestoreSession,                                /* Restore Previous Session      */
+/* #appMenuRestoreSession + toolbarseparator,             /*********** Separator ***********/
+/* #appMenuClearRecentHistory,                            /* Clear Recent History…         */
+/* #appMenuClearRecentHistory + toolbarseparator,         /*********** Separator ***********/
+/* #panelMenu_recentHistory,                              /* Recent History (label)        */
+/* #appMenu_historyMenu,                                  /* Recent History (list)         */
+/* #appMenu_historyMenu + toolbarseparator,               /*********** Separator ***********/
+/* #PanelUI-historyMore,                                  /* Manage History                */
+/* #appMenu-downloads-button,                         /* Downloads                     */
+/* #appMenu-passwords-button,                         /* Passwords                     */
+/* #appMenu-extensions-themes-button,                 /* Add-ons and Themes            */
+/* #appMenu-extensions-themes-button
+       + toolbarseparator,                            /*********** Separator ***********/
+ #appMenu-print-button2,                            /* Print…                        */
+ #appMenu-save-file-button2,                        /* Save Page As…                 */
+ #appMenu-find-button2,                             /* Find In Page…                 */
+ #appMenu-zoom-controls,                            /* Zoom                          */
+ #appMenu-zoom-controls + toolbarseparator,         /*********** Separator ***********/
+/* #appMenu-settings-button,                          /* Settings                      */
+/* #appMenu-more-button2,                             /* More Tools                    */
+/* #appmenu-moreTools-button,                             /* Customize Toolbar…            */
+/* #appmenu-moreTools-button + toolbarseparator,          /*********** Separator ***********/
+/* #appmenu-developer-tools,                              /* Browser Tools (label)         */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_toggleToolbox"],          /* Web Developer Tools           */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[oncommand="switchToTabHavingURI('about:performance', true)"],
+                                                          /* Task Manager                  */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[oncommand="switchToTabHavingURI('about:performance', true)"]
+       + toolbarbutton[label*="Debug"],                   /* Remote Debugging              */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_browserToolbox"],         /* Browser Toolbox               */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_browserToolbox"]
+       + toolbarbutton[label*="Browser"],                 /* Browser Content Toolbox       */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_browserConsole"],         /* Browser Console               */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_responsiveDesignMode"],   /* Responsive Design Mode        */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_responsiveDesignMode"]
+       + toolbarbutton,                                   /* Eyedropper                    */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_viewSource"],             /* Page Source                   */
+/* #appmenu-developer-tools-view
+       > toolbarbutton[key="key_viewSource"]
+       + toolbarbutton,                                   /* Extensions for Developers     */
+/* #appMenu-help-button2,                             /* Help                          */
+/* #PanelUI-helpItems > #appMenu_menu_openHelp,           /* Get Help                         */
+/* #PanelUI-helpItems > #appMenu_feedbackPage,            /* Submit Feedback…                 */
+/* #PanelUI-helpItems > #appMenu_helpSafeMode,            /* Troubleshoot Mode…               */
+/* #PanelUI-helpItems > #appMenu_troubleShooting,         /* More Troubleshooting Information */
+/* #PanelUI-helpItems > #appMenu_help_reportSiteIssue,    /* Report Site Issue…               */
+/* #PanelUI-helpItems
+       > #appMenu_menu_HelpPopup_reportPhishingtoolmenu,  /* Report Deceptive Site…           */
+/* #PanelUI-helpItems > #appMenu_helpSwitchDevice,        /* Switching to a new device        */
+/* #PanelUI-helpItems > #appMenu_aboutName,               /* About Firefox                    */
+/* #appMenu-help-button2 + toolbarseparator,          /*********** Separator ***********/
+/* #appMenu-quit-button2,                             /* Exit                          */
+
+/************************************* media-context.css ************************************/
+/*** When right-clicking on media like audio or html5 video ***/
+
+/* #context-media-play,                  /* Play                            */
+/* #context-media-pause,                 /* Pause                           */
+/* #context-media-mute,                  /* Mute                            */
+/* #context-media-unmute,                /* Unmute                          */
+/* #context-media-playbackrate,          /* Speed                           */
+/* #context-media-playbackrate-050x,         /* 0.5×                            */
+/* #context-media-playbackrate-100x,         /* 1.0×                            */
+/* #context-media-playbackrate-125x,         /* 1.25×                           */
+/* #context-media-playbackrate-150x,         /* 1.5×                            */
+/* #context-media-playbackrate-200x,         /* 2×                              */
+/* #context-media-loop,                  /* Loop                            */
+/* #context-leave-dom-fullscreen,        /* Exit Full Screen                */
+/* #context-video-fullscreen,            /* Full Screen                     */
+/* #context-media-hidecontrols,          /* Hide Controls                   */
+/* #context-media-showcontrols,          /* Show Controls                   */
+/* #context-media-sep-video-commands,    /************ Separator ************/
+/* #context-viewvideo,                   /* Open Video in New Tab           */
+/* #context-video-pictureinpicture,      /* Watch in Picture-in-Picture     */
+/* #context-media-sep-commands,          /************ Separator ************/
+/* #context-video-saveimage,             /* Take Snapshot…                  */
+/* #context-savevideo,                   /* Save Video As…                  */
+/* #context-saveaudio,                   /* Save Audio As…                  */
+/* #context-copyvideourl,                /* Copy Video Link                 */
+/* #context-copyaudiourl,                /* Copy Audio Link                 */
+ #context-sendvideo,                   /* Email Video…                    */
+ #context-sendaudio,                   /* Email Audio…                    */
+/* #context-sep-setbackground,           /************ Separator ************/
+/* #context-inspect,                     /* Inspect (Q)                     */
+
+/************************************ newtab-containers.css *********************************/
+/*** When right-clicking on the plus sign to open a new tab or container ***/
+
+/* #new-tab-button-popup > menuitem[accesskey="N"],             /* No Container                     */
+/* #new-tab-button-popup > menuseparator:nth-of-type(1),        /************ Separator *************/
+/* #new-tab-button-popup > menuitem[data-usercontextid="1"],    /* Personal                         */
+/* #new-tab-button-popup > menuitem[data-usercontextid="2"],    /* Work                             */
+/* #new-tab-button-popup > menuitem[data-usercontextid="3"],    /* Banking                          */
+/* #new-tab-button-popup > menuitem[data-usercontextid="4"],    /* Shopping                         */
+/* #new-tab-button-popup > menuseparator:nth-of-type(2),        /************ Separator *************/
+/* #new-tab-button-popup >
+       menuitem[command="Browser:OpenAboutContainers"],         /* Manage Containers */
+
+
+/*********************************** opt_noSendToDevice.css *********************************/
+
+ #context-sendaudio,    /* Email Audio */
+ #context-sendvideo,    /* Email Video */
+ #context-sendimage,    /* Email Image */
+/* #context-sendpagetodevice, */
+ #context-sep-sendpagetodevice,
+/* #context-sendlinktodevice, */
+/* #context-sep-sendlinktodevice, */
+/* #context_sendTabToDevice, */
+/* #context_sendTabToDevice_separator, */
+
+/* #pageAction-panel-sendToDevice,
+/* #pageAction-panel-emailLink,    /* Email Link */
+
+/************************************* select-context.css ***********************************/
+/*** When right-clicking on selected text or selected object ***/
+
+/* #context-openlinkincurrent,            /* Open Link                        */
+/* #context-copy,                         /* Copy                             */
+/* #context-selectall,                    /* Select All                       */
+/* #context-print-selection,              /* Print Selection                  */
+/* #context-sep-selectall,                /************ Separator *************/
+/* #context-take-screenshot,              /* Take Screenshot                  */
+/* #context-sep-screenshots,              /************ Separator *************/
+/* #context-searchselect,                 /* Search [Google] for "[selected]" */
+/* #context-translate-selection,          /* Translate Selection to [English] */
+/* #frame-sep,                            /************ Separator *************/
+/* #context-viewpartialsource-selection,  /* View Selection Source            */
+ #context-inspect-a11y,                 /* Inspect Accessibility Properties */
+/* #context-inspect,                      /* Inspect (Q)                      */
+
+/************************************* sidebar-context.css **********************************/
+/*** When right-clicking on items in bookmarks- or history sidebar ***/
+
+/* #placesContext_open,                           /* Open                              */
+/* #placesContext_openBookmarkContainer\:tabs,    /* Open All Bookmarks (folder)       */
+/* #placesContext_openBookmarkLinks\:tabs,        /* Open All Bookmarks (selected tabs)*/
+/* #placesContext_open\:newtab,                   /* Open in New Tab                   */
+ #placesContext_open\:newcontainertab,          /* Open in New Container Tab         */
+/* #placesContext_openContainer\:tabs,            /* Open All in Tabs (folder)         */
+/* #placesContext_openLinks\:tabs,                /* Open All in Tabs (selected tabs)  */
+/* #placesContext_open\:newwindow,                /* Open in New Window                */
+/* #placesContext_open\:newprivatewindow,         /* Open in New Private Window        */
+/* #placesContext_showInFolder,                   /* Show in Folder                    */
+/* #placesContext_openSeparator,                  /************* Separator *************/
+/* #placesContext_show_bookmark\:info,            /* Edit Bookmark…                    */
+/* #placesContext_show\:info,                     /* Edit…                             */
+/* #placesContext_show_folder\:info,              /* Edit Folder…                      */
+/* #placesContext_deleteBookmark,                 /* Delete Bookmark                   */
+/* #placesContext_removeTag,                      /* Remove Tag                        */
+/* #placesContext_deleteFolder,                   /* Delete Folder                     */
+/* #placesContext_delete,                         /* Delete                            */
+/* #placesContext_delete_history,                 /* Delete Page                       */
+/* #placesContext_deleteHost,                     /* Forget About This Site            */
+/* #placesContext_sortBy\:name,                   /* Sort By Name                      */
+/* #placesContext_deleteSeparator,                /************* Separator *************/
+/* #placesContext_cut,                            /* Cut                               */
+/* #placesContext_copy,                           /* Copy                              */
+/* #placesContext_paste_group,                    /* Paste                             */
+/* #placesContext_editSeparator,                  /************* Separator *************/
+/* #placesContext_new\:bookmark,                  /* Add Bookmark…                     */
+/* #placesContext_new\:folder,                    /* Add Folder…                       */
+/* #placesContext_new\:separator,                 /* Add Separator                     */
+/* #placesContext_newSeparator,                   /************* Separator *************/
+/* #placesContext_paste,                          /* Paste                             */
+/* #placesContext_pasteSeparator,                 /************* Separator *************/
+/* #placesContext_createBookmark,                 /* Bookmark Page…                    */
+/* #placesContext_showAllBookmarks,               /* Manage Bookmarks                  */
+
+/************************************* sidebar-header.css ***********************************/
+/*** When left-clicking on the sidebar header ***/
+
+/* #sidebar-header,                                     /* Hide sidebar header completely (use shortcuts only) */
+/* #sidebar-close,                                      /* Hide close button (X)                               */
+/* #sidebar-switcher-target,                            /* Hide sidebar switcher                               */
+
+/* TODO: Where is the following? Cannot reproduce */
+/* #sidebar-switcher-bookmarks,                         /* Bookmarks                             */
+/* #sidebar-switcher-history,                           /* History                               */
+/* #sidebar-switcher-tabs,                              /* Synced Tabs                           */
+/* #sidebar-switcher-tabs + toolbarseparator,           /*************** Separator ***************/
+/* #sidebar-extensions-separator,                       /*** Separator (after possible addons) ***/
+/* #sidebar-reverse-position,                           /* Move Sidebar to Right / Left          */
+/* #sidebar-reverse-position + toolbarseparator,        /************** Separator ****************/
+/* toolbarbutton[oncommand="SidebarUI.hide()"],         /* Close Sidebar                         */
+
+/************************************* source-context.css ***********************************/
+/*** When right-clicking on a blank area when viewing source code ***/
+/*** Note: Check out blank-context.css, it is very similar and more detailed. ***/
+
+/* #context-navigation,                    /* Hide whole navigation bar */
+/* #context-sep-navigation,                /********* Separator *********/
+/* #context-viewsource-goToLine,           /* Go to Line…               */
+/* #context-viewsource-wrapLongLines,      /* Wrap Long Lines           */
+/* #context-viewsource-highlightSyntax,    /* Syntax Highlighting       */
+/* #context-sep-viewsource-commands,       /********* Separator *********/
+/* #context-savepage,                      /* Save Page As...           */
+/* #context-selectall,                     /* Select All                */
+/* #context-sep-selectall,                 /********* Separator *********/
+/* #context-take-screenshot,               /* Take Screenshot           */
+/* #context-sep-screenshots,               /********* Separator *********/
+/* #context-viewsource,                    /* View Page Source          */
+/* #context-inspect,                       /* Inspect (Q)               */
+
+/*************************************** tab-context.css ************************************/
+/*** When right-clicking on a tab ***/
+
+ #tabContextMenu #context_openANewTab,                      /* New Tab                 */
+ #tabContextMenu #context_openANewTab + menuseparator,      /******** Separator ********/
+ #tabContextMenu #context_reloadTab,                        /* Reload Tab              */
+ #tabContextMenu #context_reloadSelectedTabs,               /* Reload Tabs             */
+/* #tabContextMenu #context_toggleMuteTab,                    /* Mute / Unmute Tab       */
+/* #tabContextMenu #context_toggleMuteSelectedTabs,           /* Mute / Unmute Tabs      */
+/* #tabContextMenu #context_pinTab,                           /* Pin Tab                 */
+/* #tabContextMenu #context_unpinTab,                         /* Unpin Tab               */
+/* #tabContextMenu #context_pinSelectedTabs,                  /* Pin Tabs                */
+/* #tabContextMenu #context_unpinSelectedTabs,                /* Unpin Tabs              */
+/* #tabContextMenu #context_duplicateTab,                     /* Duplicate Tab           */
+/* #tabContextMenu #context_duplicateTabs,                    /* Duplicate Tabs          */
+/* #tabContextMenu #context_duplicateTabs + menuseparator,    /******** Separator ********/
+ #tabContextMenu #context_bookmarkSelectedTabs,             /* Bookmark Tabs…          */
+ #tabContextMenu #context_bookmarkTab,                      /* Bookmark Tab            */
+/* #tabContextMenu #context_moveTabOptions,                   /* Move Tab                */
+/* #tabContextMenu #context_moveToStart,                          /* Move to Start           */
+/* #tabContextMenu #context_moveToEnd,                            /* Move to End             */
+/* #tabContextMenu #context_openTabInWindow,                      /* Move to New Window      */
+/* #tabContextMenu #context_sendTabToDevice,                  /* Send Tab to Device      */
+ #tabContextMenu .share-tab-url-item,                       /* Share tab URL via 3rd party app */
+ #tabContextMenu #context_reopenInContainer,                /* Reopen in Container     */
+/* #tabContextMenu #context_dummy,                                /* Send Tab to Device Submenu not yet supported */
+/* #tabContextMenu #context_selectAllTabs,                    /* Select All Tabs         */
+/* #tabContextMenu #context_selectAllTabs + menuseparator,    /******** Separator ********/
+ #tabContextMenu #context_closeTab,                         /* Close Tab               */
+ #context_closeDuplicateTabs,                               /* Close Duplicate Tabs    */
+ /* #tabContextMenu #context_closeTabOptions,                  /* Close Multiple Tabs     */
+/* #tabContextMenu #context_closeTabsToTheStart,                  /* Close Tabs to Left      */
+/* #tabContextMenu #context_closeTabsToTheEnd,                    /* Close Tabs to Right     */
+/* #tabContextMenu #context_closeOtherTabs,                       /* Close Other Tabs        */
+ #tabContextMenu #context_undoCloseTab,                     /* Undo Close Tab          */
+
+/************************************* toolbar-context.css **********************************/
+/* #unified-extensions-button,                                           /* Puzzle icon to open extensions manager */
+
+/*** When right-clicking on the toolbar or tabbar ***/
+
+/* #toolbar-context-menu .customize-context-manageExtension,             /* Manage Extension                */
+/* #toolbar-context-menu .customize-context-removeExtension,             /* Remove Extension                */
+/* #toolbar-context-menu .customize-context-reportExtension,             /* Report Extension                */
+/* #toolbar-context-menu .customize-context-reportExtension
+    + menuseparator,                                                     /************ Seperator ************/
+/* #toolbar-context-menu .customize-context-moveToPanel,                 /* Pin to Overflow Menu            */
+/* #toolbar-context-menu #toolbar-context-autohide-downloads-button,     /* Hide Button When Empty          */
+/* #toolbar-context-menu .customize-context-removeFromToolbar,           /* Remove from Toolbar             */
+/* #toolbar-context-menu .customize-context-pinToToolbar,                /* Pin to Toolbar                  */
+/* #toolbar-context-menu #toolbarDownloadsAnchorMenuSeparator,           /************ Seperator ************/
+/* #toolbar-context-menu #toolbar-context-always-open-downloads-panel,   /* Show Panel When Download Begins */
+/* #toolbar-context-menu #toolbar-context-openANewTab,                   /* New Tab                         */
+/* #toolbar-context-menu #toolbarNavigatorItemsMenuSeparator,            /************ Seperator ************/
+/* #toolbar-context-menu #toolbar-context-reloadSelectedTab,             /* Reload Selected Tab             */
+/* #toolbar-context-menu #toolbar-context-reloadSelectedTabs,            /* Reload Selected Tabs            */
+/* #toolbar-context-menu #toolbar-context-bookmarkSelectedTab,           /* Bookmark Selected Tab…          */
+/* #toolbar-context-menu #toolbar-context-bookmarkSelectedTabs,          /* Bookmark Selected Tabs…         */
+/* #toolbar-context-menu #toolbar-context-selectAllTabs,                 /* Select All Tabs                 */
+/* #toolbar-context-menu #toolbar-context-undoCloseTab,                  /* Reopen Closed Tab               */
+/* #toolbar-context-menu #toolbarItemsMenuSeparator,                     /************ Seperator ************/
+/* #toolbar-context-menu #toggle_toolbar-menubar,                        /* Menu Bar                        */
+/* #toolbar-context-menu #toggle_PersonalToolbar,                        /* Bookmarks Toolbar               */
+/* #toolbar-context-menu
+       menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /* Always Show            */
+/* #toolbar-context-menu
+       menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /* Only Show on New Tab   */
+/* #toolbar-context-menu
+       menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /* Never Show             */
+/* #toolbar-context-menu #viewToolbarsMenuSeparator,                     /************ Seperator ************/
+/* #toolbar-context-menu #viewCustomizeToolbar,                          /* Customize Toolbar…              */
+/* #toolbar-context-menu .fullscreen-context-autohide,                   /* Hide Toolbars                   */
+/* #toolbar-context-menu menuitem[data-l10n-id="full-screen-exit"],      /* Exit Fullscreen Mode            */
+
+/******************************************* Add-ons ****************************************/
+#_b9db16a4-6edc-47ec-a1f4-b86292ed211d_-menuitem-_vdh-top,              /* Video DownloadHelper  */
+
+
+
+
+
+#leave_this_dummy_here
+{ display:none !important; }
