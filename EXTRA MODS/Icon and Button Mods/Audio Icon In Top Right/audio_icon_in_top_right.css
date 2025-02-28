@@ -1,0 +1,13 @@
+/* Makes the favicons always visible (also on hover) */
+.tab-icon-image:not([pinned]){
+    opacity: 1 !important
+}
+
+/* Makes the speaker icon to always appear if the tab is playing */
+.tab-icon-overlay:not([crashed]),
+.tab-icon-overlay[pinned][crashed][selected] {
+    width:  15.5px !important;
+    height: 15.5px !important;
+    top: -6px !important;
+    inset-inline-end: -8px !important;
+}
