@@ -1,0 +1,6 @@
+[submodule "EXTRA MODS/JavaScript/fx-autoconfig"]
+	path = EXTRA MODS/JavaScript/fx-autoconfig
+	url = https://github.com/MrOtherGuy/fx-autoconfig
+[submodule "EXTRA MODS/JavaScript/uc.css.js"]
+	path = EXTRA MODS/JavaScript/uc.css.js
+	url = https://github.com/aminomancer/uc.css.js
