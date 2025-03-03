@@ -39,6 +39,7 @@
 @import url("tabs_border_highlight.css");
 @import url("remove_context_menu_items.css");
 @import url("audio_icon_in_top_right.css");
+@import url("custom_findbar.css");
 
 /*=====================================================================
 ================= D A R K   T H E M E   C O L O R S ===================
@@ -113,6 +114,7 @@
     );
 
     /* Other colors */
+    --toolbar-field-color: hsla(0, 0%, 80%, 0.80) !important; /* Internal Firefox value to set color for the urlbar text */
     --firefoxcss-urlbar-zoom-button: hsla(0, 0%, 60%, 0.35);
     --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 6%, 0.75);
     --firefoxcss-private-browsing-menu-color: hsl(277, 70%, 64%);
@@ -128,7 +130,7 @@
     /* ============== Firefox Global colors change ==================== */
     --toolbar-bgcolor: var(--firefoxcss-main-bg-color) !important;
     --arrowpanel-background: var(--firefoxcss-secondary-bg-color) !important;
-     --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35)!important;
+    --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35)!important;
     --toolbarbutton-active-background: hsla(0, 0%, 80%, 0.35) !important;
     --button-hover-bgcolor: hsla(0, 0%, 60%, 0.35) !important;
     --button-active-bgcolor: hsla(0, 0%, 45%, 0.35) !important;
@@ -269,11 +271,11 @@ Order of Toolbars
 /* CTRL+F Search Bar color changes  */
 .browserContainer > findbar {
   background-image: none !important;
-  background-color: var(--firefoxcss-secondary-bg-color) !important;
+  background-color: var(--firefoxcss-main-bg-color);
 }
 
 .browserContainer > findbar .findbar-textbox {
-  background-color: var(--firefoxcss-main-bg-color) !important;
+  background-color: var(--firefoxcss-secondary-bg-color);
 }
 
 /*=====================================================================
@@ -376,7 +378,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
   border: 0 !important;
   border-radius: var(--firefoxcss-border-radius) !important;
   background-color: var(--firefoxcss-url-bar-bg-color) !important;
-    box-shadow: var(--firefoxcss-url-box-shadow-color) !important;
+  box-shadow: var(--firefoxcss-url-box-shadow-color) !important;
 
   /*   border-bottom: var(--mod-url-border-bottom-color) !important;  */
   /*   border-top: var(--mod-url-border-top-color) !important;  */
@@ -416,7 +418,6 @@ about:config -> svg.context-properties.content.enabled -> true*/
 /* Placeholder text - add shadow and spacing  */
 #urlbar .urlbar-input::placeholder,
 #urlbar .searchbar-textbox::placeholder {
-  color: color-mix(in srgb, currentColor 80%, transparent) !important;
   opacity: 0.8 !important;
 }
 
@@ -1544,10 +1545,6 @@ mask-composite: intersect;
 
 #PersonalToolbar[customizing] {
   outline: 1px dashed var(--firefoxcss-customize-view-dashed-outline) !important;
-}
-
-.browserContainer > findbar .findbar-textbox {
-  background-color: var(--firefoxcss-main-bg-color) !important;
 }
 
 #customization-container #customization-footer {
