@@ -352,7 +352,7 @@
 /* #tabContextMenu #context_duplicateTab,                     /* Duplicate Tab           */
 /* #tabContextMenu #context_duplicateTabs,                    /* Duplicate Tabs          */
 /* #tabContextMenu #context_duplicateTabs + menuseparator,    /******** Separator ********/
- #tabContextMenu #context_bookmarkSelectedTabs,             /* Bookmark Tabs…          */
+/* #tabContextMenu #context_bookmarkSelectedTabs,             /* Bookmark Tabs…          */
  #tabContextMenu #context_bookmarkTab,                      /* Bookmark Tab            */
 /* #tabContextMenu #context_moveTabOptions,                   /* Move Tab                */
 /* #tabContextMenu #context_moveToStart,                          /* Move to Start           */
