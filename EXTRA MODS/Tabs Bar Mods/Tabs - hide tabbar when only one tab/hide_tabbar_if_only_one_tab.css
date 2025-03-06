@@ -1,8 +1,25 @@
-/* Hide tab bar if there is only 1 tab */
-#tabbrowser-tabs .tabbrowser-tab:only-of-type,
-#tabbrowser-tabs .tabbrowser-tab:only-of-type + #tabbrowser-arrowscrollbox-periphery {
-  display: none !important;
-}
+/* Auto hide tab bar if there is only 1 tab */
+
 #tabbrowser-tabs, #tabbrowser-arrowscrollbox {
   min-height: 0 !important;
+  transition: height 150ms ease-in-out, opacity 150ms ease-in-out !important;
+}
+
+#tabbrowser-tabs:has(.tabbrowser-tab:only-of-type),
+#tabbrowser-tabs:has(.tabbrowser-tab:only-of-type) + #tabbrowser-arrowscrollbox-periphery {
+  height: 0px !important;
+  opacity: 0 !important;
+}
+
+#tabbrowser-tabs:not(:has(.tabbrowser-tab:only-of-type)),
+#tabbrowser-tabs:not(:has(.tabbrowser-tab:only-of-type)) + #tabbrowser-arrowscrollbox-periphery {
+  height: calc(var(--tab-min-height) + var(--tab-margin-top) + var(--tab-margin-bottom)) !important;
+  opacity: 1 !important;
+}
+
+/* Avoid an issue with the bottom of tabbar adjusting and covering the tabs when moving tabs */
+#tabbrowser-tabs[movingtab],
+#tabbrowser-tabs[movingtab] + #tabbrowser-arrowscrollbox-periphery {
+  padding-bottom: 0 !important;
+  height: calc(var(--tab-min-height) + var(--tab-margin-top) + var(--tab-margin-bottom)) !important;
 }

@@ -180,12 +180,10 @@
   ) !important;
   @media not (-moz-bool-pref: "sidebar.verticalTabs") {
 
-    --tab-block-margin: 2px !important;
-    /* Default: 4px */
-
-    --tab-min-height: 28px !important;
-    /* Default: 36px */
-
+    --tab-block-margin: 2px !important; /* Default: 4px */
+    --tab-min-height: 28px !important; /* Default: 36px */
+    --tab-margin-top: 4px;
+    --tab-margin-bottom: 6px;
     --tabstrip-min-height: 28px !important;
   }
 
@@ -715,8 +713,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
   }
 
   #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background {
-    margin-top: 4px !important;
-    margin-bottom: 6px !important;
+    margin-top: var(--tab-margin-top) !important;
+    margin-bottom: var(--tab-margin-bottom) !important;
   }
 
   /* Remove right and left side tab overflow border line */
