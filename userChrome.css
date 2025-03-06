@@ -173,7 +173,7 @@
   --firefoxcss-tab-min-width: 45px;
   --firefoxcss-tab-max-width: 150px;
 
-  --firefoxcss-searchbar-height: 30px;
+  --firefoxcss-searchbar-height: 28px;
   --firefoxcss-searchbar-container-height: 40px;
   --urlbar-icon-border-radius: calc(
     var(--firefoxcss-border-radius) - 2px
@@ -703,7 +703,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
  */
   #TabsToolbar {
     padding-top: 0px !important;
-    padding-bottom: 2px !important;
+    padding-bottom: 0px !important;
   }
 
   /* Remove the line between the tabs / seperators */
