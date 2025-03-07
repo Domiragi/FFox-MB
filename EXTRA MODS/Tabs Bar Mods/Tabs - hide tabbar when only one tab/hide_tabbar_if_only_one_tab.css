@@ -20,6 +20,7 @@
 /* Avoid an issue with the bottom of tabbar adjusting and covering the tabs when moving tabs */
 #tabbrowser-tabs[movingtab],
 #tabbrowser-tabs[movingtab] + #tabbrowser-arrowscrollbox-periphery {
+  margin-bottom: 0 !important;
   padding-bottom: 0 !important;
   height: calc(var(--tab-min-height) + var(--tab-margin-top) + var(--tab-margin-bottom)) !important;
 }
