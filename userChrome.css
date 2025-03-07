@@ -635,6 +635,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
   .tabbrowser-tab[pinned] .tab-icon-overlay:not([crashed]) {
     &:is([soundplaying], [muted], [activemedia-blocked]) {
+      background-image:none !important;
       background-color: var(--firefoxcss-tab-speaker-color) !important;
       /*     background-color: #ffffff26 !important;  */
       background-color: #00000000 !important;
@@ -658,7 +659,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
       }
     }
   }
-
+  
   /* Pinned tabs padding  */
   :root:not([uidensity="compact"]) .tab-content[pinned] {
     padding: 0 8px !important;
