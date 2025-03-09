@@ -1,0 +1,29 @@
+/*==== Main File ====*/
+@import url("userChrome_sub.css")
+
+/*==== Nav Bar ====*/
+@import url("cleaner_extensions_menu.css");
+@import url("min-max-close_buttons.css");
+@import url("icons_in_main_menu.css");
+@import url("privacy_blur_email_in_main_menu.css");
+@import url("privacy_blur_email_in_sync_menu.css");
+
+/*==== Search/URL Bar ====*/
+@import url("no_search_engines_in_url_bar.css");
+@import url("url_bar_no_border.css");
+
+/*==== Tab Bar ====*/
+@import url("audio_icon_in_top_right.css");
+@import url("hide_tabbar_if_only_one_tab.css");
+@import url("only_show_list-all-tabs_when_tabs_overflowing.css");
+@import url("tabs_separator.css");
+@import url("tabs_border_highlight.css");
+
+/*==== Bookmar Bar ====*/
+@import url("bookmarks_bar_same_color_as_toolbar.css");
+@import url("push_bookmarks_bar_on_hover.css");
+@import url("remove_folder_icons_from_bookmarks.css");
+
+/*==== Miscs ====*/
+@import url("custom_findbar.css");
+@import url("remove_context_menu_items.css");
