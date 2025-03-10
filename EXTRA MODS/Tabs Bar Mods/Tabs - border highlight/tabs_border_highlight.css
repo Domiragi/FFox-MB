@@ -3,15 +3,15 @@
 
 /********** 1st method **********/
 :root {
-    --firefoxcss-tab-border-highlight-selected-color: #06d46d;
-    --firefoxcss-tab-border-highlight-multiselected-color: color-mix(in srgb, var(--firefoxcss-tab-border-highlight-selected-color) 30%, transparent);;
-    --firefoxcss-tab-border-highlight-glow-color: #54d193;
+    --firefoxcss-tab-border-highlight-selected-color: #ffa500;
+    --firefoxcss-tab-border-highlight-multiselected-color: color-mix(in srgb, var(--firefoxcss-tab-border-highlight-selected-color) 30%, transparent);
+    --firefoxcss-tab-border-highlight-glow-color: color-mix(in srgb, var(--firefoxcss-tab-border-highlight-selected-color) 60%, white);
 }
 
 /* Selected tab design */
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background[selected] {
   border: 2px solid var(--firefoxcss-tab-border-highlight-selected-color) !important;
-  box-shadow: 0 0 4px var(--firefoxcss-tab-border-highlight-glow-color) !important;
+  box-shadow: 0 0 4px 1px var(--firefoxcss-tab-border-highlight-glow-color) !important;
 }
 
 /* Multiselect tabs */
@@ -19,15 +19,48 @@
   border: 1.5px solid var(--firefoxcss-tab-border-highlight-multiselected-color) !important;
 }
 
-/* Multiselect tabs on hover */
-#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:hover .tab-background[multiselected] {
-  border: 1.5px solid var(--firefoxcss-tab-border-highlight-multiselected-color) !important;
-}
-
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
   border: 2px solid var(--firefoxcss-tab-border-highlight-selected-color) !important;
-  box-shadow: 0 0 4px var(--firefoxcss-tab-border-highlight-glow-color) !important;
+  box-shadow: 0 0 4px 1px var(--firefoxcss-tab-border-highlight-glow-color) !important;
 }
+
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-blue-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-blue-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-purple-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-purple-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-cyan-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-cyan-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-orange-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-orange-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-yellow-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-yellow-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-pink-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-pink-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-green"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-green-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-green-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-red"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-red-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-red-invert) 60%, white) !important;
+}
+#TabsToolbar #tabbrowser-tabs tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab .tab-background[selected] {
+  border: 2px solid var(--tab-group-color-gray-invert) !important;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--tab-group-color-gray-invert) 60%, white) !important;
+}
+
 
 /********** 2nd method **********/
 /* - This allows the highlight border to be a gradient since `border` can't use gradient color yet
@@ -92,3 +125,4 @@
  *   background: var( --identity-tab-color, var(--firefoxcss-tab-border-highlight-selected-color)) !important;
  *   box-shadow: 0 0 4px var(--firefoxcss-tab-border-highlight-glow-color) !important;
  * } */
+
