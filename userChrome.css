@@ -183,7 +183,7 @@
     --tab-block-margin: 2px !important; /* Default: 4px */
     --tab-min-height: 30px !important; /* Default: 36px */
     --tab-margin-top: 4px;
-    --tab-margin-bottom: 4px;
+    --tab-margin-bottom: 6px;
     --tabstrip-min-height: 28px !important;
   }
 
