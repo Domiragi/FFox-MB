@@ -39,23 +39,23 @@
 
   /* Mixed colors */
   --tab-group-color-blue-mix: color-mix(in lab, var(--tab-group-color-blue-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-blue-mix-dimmed: color-mix(in lab, var(--tab-group-color-blue-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-blue-mix-dimmed: color-mix(in lab, var(--tab-group-color-blue-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-purple-mix: color-mix(in lab, var(--tab-group-color-purple-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-purple-mix-dimmed: color-mix(in lab, var(--tab-group-color-purple-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-purple-mix-dimmed: color-mix(in lab, var(--tab-group-color-purple-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-cyan-mix: color-mix(in lab, var(--tab-group-color-cyan-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-cyan-mix-dimmed: color-mix(in lab, var(--tab-group-color-cyan-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-cyan-mix-dimmed: color-mix(in lab, var(--tab-group-color-cyan-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-orange-mix: color-mix(in lab, var(--tab-group-color-orange-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-orange-mix-dimmed: color-mix(in lab, var(--tab-group-color-orange-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-orange-mix-dimmed: color-mix(in lab, var(--tab-group-color-orange-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-yellow-mix: color-mix(in lab, var(--tab-group-color-yellow-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-yellow-mix-dimmed: color-mix(in lab, var(--tab-group-color-yellow-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-yellow-mix-dimmed: color-mix(in lab, var(--tab-group-color-yellow-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-pink-mix: color-mix(in lab, var(--tab-group-color-pink-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-pink-mix-dimmed: color-mix(in lab, var(--tab-group-color-pink-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-pink-mix-dimmed: color-mix(in lab, var(--tab-group-color-pink-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-green-mix: color-mix(in lab, var(--tab-group-color-green-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-green-mix-dimmed: color-mix(in lab, var(--tab-group-color-green-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-green-mix-dimmed: color-mix(in lab, var(--tab-group-color-green-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-red-mix: color-mix(in lab, var(--tab-group-color-red-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-red-mix-dimmed: color-mix(in lab, var(--tab-group-color-red-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-red-mix-dimmed: color-mix(in lab, var(--tab-group-color-red-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
   --tab-group-color-gray-mix: color-mix(in lab, var(--tab-group-color-gray-invert) 70%, var(--firefoxcss-secondary-bg-color) 40%);
-  --tab-group-color-gray-mix-dimmed: color-mix(in lab, var(--tab-group-color-gray-invert) 45%, var(--firefoxcss-secondary-bg-color) 40%);
+  --tab-group-color-gray-mix-dimmed: color-mix(in lab, var(--tab-group-color-gray-invert) 30%, var(--firefoxcss-secondary-bg-color) 40%);
 }
 
 /* Remove the accent line */
@@ -98,133 +98,152 @@ tab-group[collapsed] > .tab-group-label-container > .tab-group-label {
 
 /* Normal tabs design on hover */
 #tabbrowser-tabs tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-blue-invert) !important;
+  border: 1.5px solid var(--tab-group-color-blue-mix) !important;
   background-color: var(--tab-group-color-blue-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-purple-invert) !important;
+  border: 1.5px solid var(--tab-group-color-purple-mix) !important;
   background-color: var(--tab-group-color-purple-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-cyan-invert) !important;
+  border: 1.5px solid var(--tab-group-color-cyan-mix) !important;
   background-color: var(--tab-group-color-cyan-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-orange-invert) !important;
+  border: 1.5px solid var(--tab-group-color-orange-mix) !important;
   background-color: var(--tab-group-color-orange-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-yellow-invert) !important;
+  border: 1.5px solid var(--tab-group-color-yellow-mix) !important;
   background-color: var(--tab-group-color-yellow-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-pink-invert) !important;
+  border: 1.5px solid var(--tab-group-color-pink-mix) !important;
   background-color: var(--tab-group-color-pink-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-green"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-green-invert) !important;
+  border: 1.5px solid var(--tab-group-color-green-mix) !important;
   background-color: var(--tab-group-color-green-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-red"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-red-invert) !important;
+  border: 1.5px solid var(--tab-group-color-red-mix) !important;
   background-color: var(--tab-group-color-red-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab:hover .tab-background:not([selected]) {
-  border: 1.5px solid var(--tab-group-color-gray-invert) !important;
+  border: 1.5px solid var(--tab-group-color-gray-mix) !important;
   background-color: var(--tab-group-color-gray-mix-dimmed) !important;
 }
 
 /* Selected tabs design */
 #tabbrowser-tabs tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-blue-invert) !important;
   background-color: var(--tab-group-color-blue-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-purple-invert) !important;
   background-color: var(--tab-group-color-purple-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-cyan-invert) !important;
   background-color: var(--tab-group-color-cyan-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-orange-invert) !important;
   background-color: var(--tab-group-color-orange-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-yellow-invert) !important;
   background-color: var(--tab-group-color-yellow-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-pink-invert) !important;
   background-color: var(--tab-group-color-pink-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-green"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-green-invert) !important;
   background-color: var(--tab-group-color-green-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-red"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-red-invert) !important;
   background-color: var(--tab-group-color-red-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab .tab-background[selected] {
+  border: 1.5px solid var(--tab-group-color-gray-invert) !important;
   background-color: var(--tab-group-color-gray-mix) !important;
 }
 
 /* Multiselect tabs */
 #tabbrowser-tabs tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-blue-invert) !important;
+  border: 1.5px solid var(--tab-group-color-blue-mix) !important;
   background-color: var(--tab-group-color-blue-mix-dimmed)  !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-purple-invert) !important;
+  border: 1.5px solid var(--tab-group-color-purple-mix) !important;
   background-color: var(--tab-group-color-purple-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-cyan-invert) !important;
+  border: 1.5px solid var(--tab-group-color-cyan-mix) !important;
   background-color: var(--tab-group-color-cyan-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-orange-invert) !important;
+  border: 1.5px solid var(--tab-group-color-orange-mix) !important;
   background-color: var(--tab-group-color-orange-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-yellow-invert) !important;
+  border: 1.5px solid var(--tab-group-color-yellow-mix) !important;
   background-color: var(--tab-group-color-yellow-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-pink-invert) !important;
+  border: 1.5px solid var(--tab-group-color-pink-mix) !important;
   background-color: var(--tab-group-color-pink-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-green"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-green-invert) !important;
+  border: 1.5px solid var(--tab-group-color-green-mix) !important;
   background-color: var(--tab-group-color-green-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-red"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-red-invert) !important;
+  border: 1.5px solid var(--tab-group-color-red-mix) !important;
   background-color: var(--tab-group-color-red-mix-dimmed) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab .tab-background:is([multiselected]) {
-  border: 1.5px solid var(--tab-group-color-gray-invert) !important;
+  border: 1.5px solid var(--tab-group-color-gray-mix) !important;
   background-color: var(--tab-group-color-gray-mix-dimmed) !important;
 }
 
 #tabbrowser-tabs tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-blue-invert) !important;
   background-color: var(--tab-group-color-blue-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-purple-invert) !important;
   background-color: var(--tab-group-color-purple-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-cyan-invert) !important;
   background-color: var(--tab-group-color-cyan-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-orange-invert) !important;
   background-color: var(--tab-group-color-orange-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-yellow-invert) !important;
   background-color: var(--tab-group-color-yellow-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-pink-invert) !important;
   background-color: var(--tab-group-color-pink-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-green"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-green-invert) !important;
   background-color: var(--tab-group-color-green-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-red"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-red-invert) !important;
   background-color: var(--tab-group-color-red-mix) !important;
 }
 #tabbrowser-tabs tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  border: 1.5px solid var(--tab-group-color-gray-invert) !important;
   background-color: var(--tab-group-color-gray-mix) !important;
 }
+
