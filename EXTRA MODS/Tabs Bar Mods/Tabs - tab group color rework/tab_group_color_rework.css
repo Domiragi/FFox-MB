@@ -200,3 +200,31 @@ tab-group[collapsed] > .tab-group-label-container > .tab-group-label {
   border: 1.5px solid var(--tab-group-color-gray-invert) !important;
   background-color: var(--tab-group-color-gray-mix-dimmed) !important;
 }
+
+#tabbrowser-tabs tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-blue-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-purple-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-cyan-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-orange-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-yellow-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-pink-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-green"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-green-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-red"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-red-mix) !important;
+}
+#tabbrowser-tabs tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab .tab-background:is([selected]):is([multiselected]) {
+  background-color: var(--tab-group-color-gray-mix) !important;
+}
