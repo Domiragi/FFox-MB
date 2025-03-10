@@ -3,7 +3,6 @@
 }
 
 #PersonalToolbar {
-  padding: 1px 6px !important;
   height: 0px !important;
   opacity: 0 !important;
   transition-property: height, opacity !important;
@@ -15,6 +14,7 @@
 #navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #PersonalToolbar,
 #PersonalToolbar:has(.bookmark-item[open]),
 #navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]) {
+  padding: 1px 6px !important;
   height: calc(var(--uc-bm-height) + 2*var(--uc-bm-padding) + var(--uc-bm-margin-bottom)) !important;
   opacity: 1 !important;
 }
