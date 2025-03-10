@@ -1,5 +1,5 @@
 /*==== Main File ====*/
-@import url("userChrome_sub.css")
+@import url("userChrome_sub.css");
 
 /*==== Nav Bar ====*/
 @import url("cleaner_extensions_menu.css");
@@ -16,6 +16,7 @@
 @import url("audio_icon_in_top_right.css");
 @import url("hide_tabbar_if_only_one_tab.css");
 @import url("only_show_list-all-tabs_when_tabs_overflowing.css");
+@import url("tab_group_color_rework.css");
 @import url("tabs_separator.css");
 @import url("tabs_border_highlight.css");
 
