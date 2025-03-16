@@ -4,6 +4,8 @@
 @import url("wallpaper-edition.css");
 @import url("remove_homepage_shortcut_title_text.css");
 @import url("circular_homepage_shortcuts.css");
+@import url("custom_downloads.css");
+@import url("custom_theme.css");
 
 /*=====================================================================
 ================= D A R K   T H E M E   C O L O R S ===================
@@ -11,24 +13,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --firefoxcss-main-bg-color: hsl(220, 2%, 13%);
-    --firefoxcss-item-bg-color: hsl(220, 2%, 20%);
+    --firefoxcss-main-bg-color: hsl(207, 95%, 8%);
+    --firefoxcss-secondary-bg-color: hsl(207, 71%, 15%);
     --firefoxcss-item-hover-bg-color: hsl(240, 2%, 25%);
     --firefoxcss-text-color: hsl(0, 0%, 100%);
     --firefoxcss-other-color: hsl(290, 21%, 20%);
 
     /* ----- Private Page Colors ----- */
-    --firefoxcss-private-search-bg-color: hsla(275, 13%, 33%, 0.3);
-    --firefoxcss-private-search-top-border: hsla(275, 13%, 40%, 0.3);
-    --firefoxcss-private-search-fill: hsl(275, 13%, 53%);
+    --firefoxcss-private-search-bg-color: var(--firefoxcss-secondary-bg-color);
+    --firefoxcss-private-search-top-border: var(--firefoxcss-border-color);
+    --firefoxcss-private-search-fill: hsl(276, 61%, 57%);
 
     --firefoxcss-private-search-hover: hsla(275, 13%, 43%, 0.3);
-    --firefoxcss-private-search-border-hover: hsla(275, 13%, 50%, 0.3);
-    --firefoxcss-private-search-hover-fill: hsl(275, 13%, 63%);
+    --firefoxcss-private-search-border-hover: hsl(275, 48%, 47%);
+    --firefoxcss-private-search-hover-fill: hsl(276, 61%, 57%);
 
     --firefoxcss-private-search-text: var(--firefoxcss-private-search-fill);
     --firefoxcss-private-search-text-hover: var(--firefoxcss-private-search-hover-fill);
-    --firefoxcss-private-search-caret: hsl(290, 21%, 80%);
+    --firefoxcss-private-search-caret: hsl(289, 89%, 76%);
 
     --firefoxcss-private-search-box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
       0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
@@ -69,10 +71,10 @@
     --firefoxcss-settings-wheel-color-hover: hsla(240, 20%, 90%, 0.9);
     --firefoxcss-settings-wheel-bg-color-hover: rgba(255, 255, 255, 0.2);
     --firefoxcss-shortcut-search-icon-color: #7ae3f463;
-    
+
     /* ----- Firefox View color changes ----- */
     --fxview-background-color: var(--firefoxcss-main-bg-color) !important;
-    --fxview-background-color-secondary: var(--firefoxcss-item-bg-color) !important;
+    --fxview-background-color-secondary: var(--firefoxcss-secondary-bg-color) !important;
     --firefoxcss-firefoxview-sticky-color: hsla(240, 2%, 13%, 0.75) !important;
     --firefoxcss-firefoxview-search-color: hsla(240, 2%, 35%, 0.5) !important;
   }
@@ -100,7 +102,7 @@ body {
     background-color: var(--firefoxcss-private-search-bg-color) !important;
     border: none !important;
     box-shadow: none !important;
-    border-top: 1px solid var(--firefoxcss-private-search-top-border) !important;
+    border: 1px solid var(--firefoxcss-private-search-top-border) !important;
     border-radius: 10px 10px 10px 10px !important;
     fill: var(--firefoxcss-private-search-fill) !important;
     box-shadow: var(--firefoxcss-private-search-box-shadow) !important;
@@ -111,9 +113,10 @@ body {
 
   #search-handoff-button:hover,
   #search-handoff-button:focus,
+  #search-handoff-button.focused,
   #search-handoff-button:active {
     background-color: var(--firefoxcss-private-search-hover) !important;
-    border-top: 1px solid var(--firefoxcss-private-search-border-hover) !important;
+    border: 1px solid var(--firefoxcss-private-search-border-hover) !important;
     fill: var(--firefoxcss-private-search-hover-fill) !important;
   }
 
@@ -173,7 +176,7 @@ url("about:newtab") {
 
   .search-wrapper .search-handoff-button {
     appearance: none !important;
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-secondary-bg-color) !important;
     color: var(--firefoxcss-search-color) !important;
     border: none !important;
     box-shadow: none !important;
@@ -196,10 +199,10 @@ url("about:newtab") {
     background-color: var(--firefoxcss-settings-wheel-bg-color-hover) !important;
     backdrop-filter: blur(10px);
   }
-  
- 
+
+
   .body-wrapper .tile {
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-secondary-bg-color) !important;
     border-top: 1px solid var(--firefoxcss-shortcut-item-top-border) !important;
     box-shadow: var(--firefoxcss-shortcut-item-box-shadow) !important;
     transition: background-color 150ms ease, border-color 150ms ease !important;
@@ -224,7 +227,7 @@ url("about:newtab") {
     margin-left:5px !important;
     opacity: 0.7 !important;
   }
-  
+
   menu .customize-menu {
     backdrop-filter: blur(32px) !important;
     border: var(--firefoxcss-customize-menu-border) !important;
@@ -233,7 +236,7 @@ url("about:newtab") {
 /*     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)) !important; */
     height: unset !important;
   }
-  
+
   .customize-menu .category.wallpaper-list {
     overflow: hidden !important;
     height: auto !important;
@@ -241,11 +244,11 @@ url("about:newtab") {
     backdrop-filter: blur(24px) !important;
     border-radius: 8px;
     margin-top: 16px !important;
-     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2)) !important; 
+     filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2)) !important;
        border: var(--firefoxcss-customize-menu-border) !important;
-  
+
   }
-  
+
 
   .home-section .section .selector {
     background-color: var(--firefoxcss-customize-menu-dropdown) !important;
@@ -273,13 +276,13 @@ url("about:newtab") {
   .top-site-outer .top-site-button:hover .title {
     opacity: 1 !important;
   }
-  
+
  .top-site-outer .context-menu-button.icon:is(:active, :focus, :hover) {
     fill: #f79743 !important;
     background-color: transparent !important;
     border: 0 !important;
   }
- 
+
 
   .top-site-outer .context-menu-button {
     fill: var(--firefoxcss-context-menu-three-dots) !important;
@@ -290,12 +293,12 @@ url("about:newtab") {
 
   .card-outer .context-menu-button.icon:is(:active, :focus) {
     fill: #f79743 !important;
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-secondary-bg-color) !important;
     border: 0 !important;
   }
 
   .card-outer .context-menu-button.icon {
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-secondary-bg-color) !important;
     border: 0 !important;
   }
 
@@ -307,7 +310,7 @@ url("about:newtab") {
 
   .top-site-button .title.has-icon.pinned span:hover .icon {
     display: inline-block !important;
-  
+
   }
 
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus) {
@@ -378,7 +381,7 @@ url("about:newtab") {
     padding: 20px 25px !important;
   }
 
-@media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabLayouts.variant-b") 
+@media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabLayouts.variant-b")
 	or (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabLayouts.variant-a") {
   .layout-variant-a .top-site-outer .tile .icon-wrapper,
   .layout-variant-b .top-site-outer .tile .icon-wrapper {
@@ -570,7 +573,7 @@ url("about:newtab") {
   }
 
   .collapsible-section .card-outer {
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-secondary-bg-color) !important;
   }
 
   .collapsible-section .card-outer .card-preview-image-outer {
@@ -578,7 +581,7 @@ url("about:newtab") {
   }
 
   .compact-cards .card-outer .card-context {
-    background-color: var(--firefoxcss-item-bg-color) !important;
+    background-color: var(--firefoxcss-secondary-bg-color) !important;
   }
 
   @media only screen and (max-width: 609px) {
@@ -605,27 +608,27 @@ url("about:newtab") {
 
   /*.outer-wrapper .search-wrapper .search-handoff-button {
      background-image: url("ASSETS/icons/search-glass.svg") !important;
-     background-size: 16px !important;  
+     background-size: 16px !important;
   }*/
-  
+
   /* Remove photo attribution when wallpaper for new tab is set */
   .wallpaper-attribution {
     display: none !important;
   }
-  
+
   /* Customization menu close button changes */
   .customize-menu .close-button {
     backdrop-filter: blur(24px) !important;
   }
-  
+
   .activity-stream.darkWallpaper {
      @media (prefers-color-scheme: dark) {
-      --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.6) !important;
+      --firefoxcss-secondary-bg-color: hsla(0, 0%, 12%, 0.6) !important;
       --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.5) !important;
     }
-    
+
     @media (prefers-color-scheme: light) {
-      --firefoxcss-item-bg-color: hsla(200, 10%, 98%, 0.25) !important;
+      --firefoxcss-secondary-bg-color: hsla(200, 10%, 98%, 0.25) !important;
       --firefoxcss-item-hover-bg-color: hsla(200, 10%, 98%, 0.28) !important;
       --firefoxcss-search-border-top-color: hsla(0, 0%, 100%, 0.1) !important;
       --firefoxcss-search-text-fill: rgba(255, 255, 255, 0.6) !important;
@@ -635,13 +638,13 @@ url("about:newtab") {
       --firefoxcss-settings-wheel-color: hsla(200, 20%, 90%, 0.6) !important;
       --firefoxcss-settings-wheel-color-hover: hsla(200, 20%, 90%, 0.9) !important;
       --firefoxcss-shortcut-item-active: hsla(200, 20%, 90%, 0.8) !important;
-      
-      
+
+
       .top-site-outer:hover:not(.active) .title,
        .top-site-outer:hover:not(.active) .title .icon.icon-pin-small{
         color: #fbfbfe !important;
        }
-      
+
        .top-site-outer .context-menu,
       .card-outer .context-menu {
         --firefoxcss-shortcut-item-context-menu: hsla(0, 0%, 95%, 0.8) !important;
@@ -649,67 +652,67 @@ url("about:newtab") {
         --firefoxcss-shortcut-item-context-menu-separator: hsla(0, 0%, 0%, 0.1) !important;
       }
     }
-    
+
     & .collapsible-section .card-outer {
       backdrop-filter: blur(20px) !important;
     }
-    
+
     & .body-wrapper .tile {
       backdrop-filter: blur(20px) !important;
       border-top: 1px solid hsla(0, 0%, 100%, 0.145) !important;
     }
-    
+
     & .body-wrapper .top-site-button:hover .tile {
        filter: brightness(115%);
        border-top: 1px solid hsla(0, 0%, 58%, 0.3) !important;
-    } 
-    
+    }
+
     /*  Pocket cards background blur - new tab */
     & .ds-card-grid .ds-card:not(.placeholder) {
-       backdrop-filter: blur(20px); 
+       backdrop-filter: blur(20px);
     }
-    
+
   }
-  
+
   .activity-stream.lightWallpaper {
     @media (prefers-color-scheme: dark) {
-       --firefoxcss-item-bg-color: hsla(0, 0%, 12%, 0.8) !important;
+       --firefoxcss-secondary-bg-color: hsla(0, 0%, 12%, 0.8) !important;
        --firefoxcss-item-hover-bg-color: hsla(0, 0%, 15%, 0.7) !important;
        --firefoxcss-settings-wheel-color: hsla(0, 0%, 12%, 0.75) !important;
-       --firefoxcss-settings-wheel-color-hover:  hsla(0, 0%, 12%, 0.55) !important; 
-      
+       --firefoxcss-settings-wheel-color-hover:  hsla(0, 0%, 12%, 0.55) !important;
+
        .top-site-outer:hover:not(.active) .title,
        .top-site-outer:hover:not(.active) .title .icon.icon-pin-small{
         color: hsl(250, 13%, 9%) !important;
        }
-  
+
     }
-    
+
      @media (prefers-color-scheme: light) {
-      --firefoxcss-item-bg-color: hsla(200, 10%, 98%, 0.75) !important;
+      --firefoxcss-secondary-bg-color: hsla(200, 10%, 98%, 0.75) !important;
       --firefoxcss-item-hover-bg-color: hsla(200, 10%, 98%, 0.85) !important;
     }
-    
+
     & .collapsible-section .card-outer {
       backdrop-filter: blur(22px) !important;
     }
-    
+
     & .body-wrapper .tile {
       backdrop-filter: blur(22px) !important;
     }
-    
+
     & .body-wrapper .top-site-button:hover .tile {
        filter: brightness(115%);
        border-top: 1px solid hsla(0, 0%, 58%, 0.1) !important;
-    } 
-    
+    }
+
     /*  Pocket cards background blur - new tab */
     & .ds-card-grid .ds-card:not(.placeholder) {
-       backdrop-filter: blur(20px); 
+       backdrop-filter: blur(20px);
     }
-    
+
   }
-  
+
   /* Pocket extra modification by request */
 @media (-moz-bool-pref: "firefoxcss.pocket.oneline.enable") {
   /* Pocket new tab - Learn More text disable  */
@@ -755,8 +758,8 @@ url("about:newtab") {
       	}
   }
 }
-  
-  
+
+
 }
 
 @-moz-document url-prefix(about:firefoxview) {
@@ -764,11 +767,11 @@ url("about:newtab") {
   .search-container {
     border: none !important;
   }
-  
+
   .search-container input {
     background-color: var(--firefoxcss-firefoxview-search-color) !important;
   }
-  
+
   div.sticky-container.bottom-fade {
     background: none !important;
     background-color: var(--firefoxcss-firefoxview-sticky-color) !important;
@@ -776,7 +779,7 @@ url("about:newtab") {
     flex-direction: row !important;
     padding-block: 30px 20px !important;
   }
- 
+
   @media (max-width: 52rem) {
   div.sticky-container.bottom-fade {
     flex-direction: column !important;
@@ -787,9 +790,9 @@ url("about:newtab") {
 
 @-moz-document url-prefix("about:") {
   :root {
-     --in-content-box-background: var(--firefoxcss-item-bg-color) !important;
-     --in-content-table-background: var(--firefoxcss-item-bg-color) !important; 
-     --in-content-page-background: var(--firefoxcss-main-bg-color) !important; 
+     --in-content-box-background: var(--firefoxcss-secondary-bg-color) !important;
+     --in-content-table-background: var(--firefoxcss-secondary-bg-color) !important;
+     --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
   }
 }
 
@@ -799,5 +802,187 @@ url("about:newtab") {
   html:not(#ublock0-epicker) body, */
   #newtab-customize-overlay {
     background-color: var(--firefoxcss-main-bg-color) !important;
+  }
+}
+
+
+/*=========== Codes from: https://github.com/aminomancer/uc.css.js/blob/master/resources/in-content/system.css ===========*/
+
+@-moz-document regexp("view-source:.*") {
+  @media (prefers-color-scheme: dark) {
+    ::selection {
+      color: var(--content-selection-color) !important;
+      background-color: var(--content-selection-bgcolor) !important;
+    }
+
+    .highlight :is(.start-tag, .end-tag)::selection {
+      color: #801f1f !important;
+    }
+
+    .highlight .comment::selection {
+      color: #235c23 !important;
+    }
+
+    .highlight .cdata::selection {
+      color: #77254e !important;
+    }
+
+    .highlight :is(.doctype, .markupdeclaration)::selection {
+      color: #555 !important;
+    }
+
+    .highlight .entity::selection {
+      color: #884026 !important;
+    }
+
+    .highlight .attribute-value::selection {
+      color: #233d6d !important;
+    }
+
+    .highlight .pi::selection {
+      color: #6b228f !important;
+    }
+
+    .highlight .error::selection {
+      text-decoration-color: #801f1f !important;
+    }
+  }
+}
+
+@-moz-document regexp("^(about:|chrome:|moz-extension:).*") {
+  html:not([role="dialog"]),
+  html:not([role="dialog"]) *,
+  html:not([role="dialog"]) body.activity-stream,
+  window:not([chromehidden]),
+  window:not([chromehidden]) > dialog,
+  #downloadsListBox richlistitem,
+  info-item,
+  info-group,
+  certificate-section {
+    --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
+    --in-content-page-color: hsl(212, 43%, 90%)!important;
+    --in-content-text-color: var(--in-content-page-color) !important;
+    --in-content-accent-color: var(--firefoxcss-border-color-highlight) !important;
+    --in-content-border-color: var(--firefoxcss-border-color) !important;
+    --in-content-border-hover: var(--firefoxcss-border-color) !important;
+    --in-content-border-active: var(--firefoxcss-border-color-highlight) !important;
+    --in-content-box-background: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-box-background-odd: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-box-background-dim: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-box-border-color: var(--firefoxcss-border-color) !important;
+    --in-content-box-info-background: var(--firefoxcss-secondary-bg-color) !important;
+    --background-color-box: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-table-background: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-table-header-background: var(--color-accent-primary-active) !important;
+    /* --in-content-link-color: var(--purple-30) !important;
+    --in-content-link-color-hover: var(--purple-25) !important;
+    --in-content-link-color-active: var(--purple-20) !important;
+    --in-content-link-visited-color: var(--pink-40) !important;
+    --in-content-link-visited-color-hover: var(--pink-35) !important;
+    --in-content-link-visited-color-active: var(--pink-30) !important;
+    --link-color: var(--purple-30) !important;
+    --link-color-hover: var(--purple-25) !important;
+    --link-color-active: var(--purple-20) !important;
+    --link-visited-color: var(--pink-40) !important;
+    --link-visited-color-hover: var(--pink-35) !important;
+    --link-visited-color-active: var(--pink-30) !important; */
+    --button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
+    --button-background-hover: var(--color-accent-primary-hover) !important;
+    --button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --button-background-solid: var(--firefoxcss-button-select-highlight);
+    --in-content-button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
+    --in-content-button-background-hover: var(--color-accent-primary-hover) !important;
+    --in-content-button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --in-content-button-background-solid: var(--firefoxcss-button-select-highlight);
+    --in-content-button-text-color: var(--ui-text-50) !important;
+    --in-content-button-text-color-hover: var(--ui-text-50) !important;
+    --in-content-button-text-color-active: var(--ui-text-50) !important;
+    --in-content-primary-button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
+    --in-content-primary-button-background-hover: var(--color-accent-primary-hover) !important;
+    --in-content-primary-button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --in-content-primary-button-text-color: hsl(198, 100%, 9%) !important;
+    --in-content-primary-button-text-color-hover: hsl(198, 100%, 9%) !important;
+    --color-accent-primary: hsl(200, 100%, 50%) !important;
+    --color-accent-primary-hover: hsl(200, 100%, 42%) !important;
+    --color-accent-primary-active: hsl(200, 100%, 35%) !important;
+    --in-content-button-border-radius: var(--general-button-border-radius) !important;
+    --in-content-item-selected: var(--firefoxcss-button-select-highlight) !important;
+    --in-content-item-hover: var(--firefoxcss-button-hover-highlight) !important;
+    --in-content-item-hover-text: var(--ui-text-80) !important;
+    --focus-outline-color: var(--firefoxcss-border-color-highlight) !important;
+    --focus-outline-offset: 2px !important;
+    --default-focusring: 1px solid var(--firefoxcss-border-color-highlight) !important;
+    --newtab-background-color: var(--in-content-page-background) !important;
+    --newtab-text-primary-color: var(--in-content-page-color) !important;
+    --lwt-sidebar-background-color: var(--in-content-box-background) !important;
+    --lwt-sidebar-text-color: var(--in-content-page-color) !important;
+    --newtab-search-header-background-color: color-mix(in srgb, var(--in-content-page-background) 70%, transparent) !important;
+    --newtab-search-header-background-intermediate: color-mix(in srgb, var(--in-content-page-background) 80%, transparent) !important;
+    --newtab-seperator-line-color: var(--in-content-button-background-hover) !important;
+    --newtab-modal-color: var(--in-content-box-background) !important;
+    --newtab-focus-outline: var(--purple-40-a50) !important;
+    --newtab-focus-border: var(--purple-40) !important;
+    --newtab-focus-border-selected: var(--purple-30) !important;
+    --newtab-textbox-background-color: var(--in-content-button-background) !important;
+    --newtab-textbox-focus-color: var(--purple-40) !important;
+    --newtab-primary-action-background: var(--in-content-primary-button-background-hover) !important;
+    --newtab-primary-action-background-hover: color-mix(in srgb, var(--purple-30) 60%, var(--newtab-primary-action-background)) !important;
+    --newtab-primary-action-background-active: color-mix(in srgb, var(--purple-25) 60%, var(--newtab-primary-action-background)) !important;
+    --newtab-primary-element-text-color: var(--ui-text-80) !important;
+    --newtab-element-secondary-color: var(--in-content-button-background-hover) !important;
+    --newtab-element-secondary-color-hover: color-mix(in srgb, var(--ui-text-40) 50%, var(--in-content-button-background-solid)) !important;
+    --newtab-element-secondary-color-active: color-mix(in srgb, var(--ui-text-50) 50%, var(--in-content-button-background-solid)) !important;
+    --newtab-button-primary-color: var(--in-content-primary-button-background-hover) !important;
+    --newtab-border-primary-color: var(--in-content-button-background-active) !important;
+    --newtab-background-color-secondary: var(--in-content-button-background-solid) !important;
+    --newtab-card-active-outline-color: var(--in-content-button-background) !important;
+    /* --newtab-link-primary-color: var(--in-content-link-color-active) !important;
+    --newtab-link-secondary-color: var(--in-content-link-color) !important; */
+    --newtab-topsites-background-color: var(--in-content-button-background) !important;
+    --customize-menu-background: var(--in-content-box-background) !important;
+    --customize-menu-secondary-action-background: var(--in-content-button-background) !important;
+    --customize-menu-secondary-action-background-hover: var(--in-content-button-background-hover) !important;
+    --customize-menu-secondary-action-background-active: var(--in-content-button-background-active) !important;
+    --customize-menu-first-shadow: hsla(250, 3%, 2%, 0.2) !important;
+    --customize-menu-second-shadow: hsla(250, 3%, 2%, 0.4) !important;
+    --newtab-contextmenu-background-color: var(--in-content-table-background) !important;
+    --newtab-contextmenu-button-color: var(--in-content-box-background) !important;
+    --newtab-card-background-color: var(--in-content-box-background) !important;
+    --newtab-card-placeholder-color: var(--in-content-box-background) !important;
+    --newtab-search-text-color: var(--ui-text-70) !important;
+    --newtab-search-first-shadow: rgba(21, 20, 26, 0.5);
+    --newtab-search-second-shadow: rgba(21, 20, 26, 0.75);
+  }
+}
+
+/* firefox screenshots addon overlay */
+@-moz-document regexp("^moz-extension://.*/blank.html.*") {
+  :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container {
+    background-color: var(--firefoxcss-main-bg-color) !important;
+    height: 88px !important;
+    box-shadow: 0 0 0 1px rgba(12, 12, 13, 0.1), 0 0 8px rgba(12, 12, 13, 0.1) !important;
+  }
+
+  :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container button {
+    color: hsl(212, 43%, 90%) !important;
+    background-color: transparent !important;
+    border-radius: var(--firefoxcss-box-border-radius) !important;
+    padding: 54px 5px 5px !important;
+    stroke: var(--firefoxcss-border-color-highlight) !important;
+    fill: hsl(0, 0%, 93%) !important;
+    appearance: none !important;
+    -moz-context-properties: fill, stroke !important;
+  }
+
+  :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container button:hover {
+    background-color: hsla(240, 3%, 70%, 0.1) !important;
+    border: 1px solid hsla(240, 3%, 70%, 0.1) !important;
+  }
+
+  :root[uc-extension-id="screenshots@mozilla.org"] .pixel-dimensions {
+    margin-block-start: -5px;
+    margin-inline-start: -5px;
+    color: #fff !important;
+    text-shadow: 0.5px 0.5px 0.5px black, 0 0 1px black, 0 0 1px black !important;
   }
 }

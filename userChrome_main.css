@@ -10,7 +10,7 @@
 
 /*==== Search/URL Bar ====*/
 @import url("no_search_engines_in_url_bar.css");
-@import url("url_bar_no_border.css");
+/* @import url("url_bar_no_border.css"); */
 
 /*==== Tab Bar ====*/
 @import url("audio_icon_in_top_right.css");
@@ -28,3 +28,5 @@
 /*==== Miscs ====*/
 @import url("custom_findbar.css");
 @import url("remove_context_menu_items.css");
+@import url("custom_downloads.css");
+@import url("custom_theme.css");

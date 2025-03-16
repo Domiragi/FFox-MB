@@ -1,0 +1,136 @@
+@-moz-document url("chrome://browser/content/browser.xhtml"), url-prefix("chrome://browser/content/places/places.xhtml"), url-prefix("about:downloads") {
+  richlistitem.download-state,
+  #downloadsSummary {
+      position: relative !important;
+      border-radius: var(--firefoxcss-box-border-radius) !important;
+      padding: 0 !important;
+      margin: 2px 4px !important;
+      border: 0 !important;
+      outline: 0 !important;
+      background: none !important;
+  }
+  
+  #downloadsSummary {
+      height: auto !important;
+      min-height: auto !important;
+      border-radius: var(--firefoxcss-box-border-radius) !important;
+      margin: 0 !important;
+      padding: 8px 4px !important;
+      padding-inline-end: calc(4px + 8px + 8px + 32px) !important;
+      gap: 4px !important;
+  }
+  
+  panel richlistitem.download-state[state="1"]:not([exists]) :is(.downloadTarget, .downloadDetails) {
+      color: hsla(213, 43%, 89%, 0.5);
+  }
+  
+  richlistitem.download-state[state="1"]:not([exists]) .downloadTypeIcon {
+      opacity: 0.6;
+  }
+  #downloadsHistory:focus {
+    background-color: revert;
+  }
+
+  panel richlistitem.download-state .downloadDetails,
+  #downloadsSummaryDetails {
+      opacity: 0.8 !important;
+      color: hsl(0, 0%, 100%);
+  }
+  
+  #downloadsListBox richlistitem {
+      color: inherit !important;
+  }
+  
+  #downloadsSummaryDescription {
+      color: inherit !important;
+  }
+
+  .downloadProgress {
+    appearance: none !important;
+    border: 1px solid transparent !important;
+    border-radius: 14px !important;
+    height: 7px !important;
+    background-color: hsla(236, 100%, 83%, 0.17) !important;
+    overflow: hidden !important;
+  }
+
+  .downloadProgress[paused] {
+    background-color: hsla(236, 60%, 83%, 0.17) !important;
+  }
+
+  .downloadProgress::-moz-progress-bar {
+    --download-progress-fill-color: var(--firefoxcss-border-color-highlight) !important;
+    --download-progress-flare-color: var(--firefoxcss-border-color-highlight) !important;
+
+    background-image: none !important;
+    background-color: var(--download-progress-fill-color) !important;
+  }
+
+  .downloadProgress:not([value="0"])::-moz-progress-bar {
+    margin: 0 !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
+
+  .downloadProgress:not(:indeterminate)::-moz-progress-bar {
+    /* mask: linear-gradient(#fff, #fff), url(chrome://userchrome/content/layout/contentaccessible/progress-bar-mask.svg) center right/14px; */
+    mask-repeat: no-repeat;
+    mask-composite: subtract;
+    animation: none !important;
+  }
+
+  .downloadProgress:indeterminate::-moz-progress-bar {
+    border-radius: 0 !important;
+    background-image: linear-gradient(90deg, transparent 0%, var(--download-progress-flare-color) 25%, transparent 50%, var(--download-progress-flare-color) 75%, transparent 100%) !important;
+  }
+
+  .downloadProgress[paused]:indeterminate::-moz-progress-bar {
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+}
+  
+  /* places organizer */
+@-moz-document url-prefix("chrome://browser/content/places/places.xhtml"), url-prefix("about:downloads") {
+  #downloadsListBox {
+      border: none !important;
+      outline: none !important;
+      background: var(--firefoxcss-main-bg-color) !important;
+  }
+  #contentAreaDownloadsView {
+      background: var(--firefoxcss-main-bg-color) !important;
+  }
+  /* Unselected items when hovered */
+  richlistitem.download-state:not([selected]):is(:hover, :focus-visible),
+  richlistitem.download-state[state="1"][exists]:not([selected]):is(:hover, :focus-visible),
+  richlistitem.download-state:is([verdict], .openWhenFinished):not([selected]):is(:hover, :focus-visible),
+  richlistitem.download-state[state="1"][exists]:not([selected]):hover:active,
+  richlistitem.download-state:is([verdict], .openWhenFinished):not([selected]):hover:active {
+      background: var(--firefoxcss-button-hover-highlight) !important; /* Hover color */
+  }
+  /* Selected items keep the selected color even when hovered */
+  richlistitem.download-state[selected]:is(:hover, :focus-visible),
+  richlistitem.download-state[state="1"][exists][selected]:is(:hover, :focus-visible),
+  richlistitem.download-state:is([verdict], .openWhenFinished)[selected]:is(:hover, :focus-visible),
+  richlistitem.download-state[state="1"][exists][selected]:hover:active,
+  richlistitem.download-state:is([verdict], .openWhenFinished)[selected]:hover:active {
+      background: var(--firefoxcss-button-select-highlight) !important; /* Selected color */
+      outline: 2px solid var(--firefoxcss-border-color-highlight) !important;
+  }
+  /* Selected state */
+  richlistitem.download-state[state="1"][exists]:focus-within:not(:focus-visible),
+  richlistitem.download-state:is([verdict], .openWhenFinished):focus-within:not(:focus-visible),
+  richlistitem.download-state[selected]:not(:focus-visible, :focus-within) {
+      background: var(--firefoxcss-button-select-highlight) !important; /* Selected color */
+      outline: 2px solid var(--firefoxcss-border-color-highlight) !important;
+  }
+  richlistitem.download-state[state="1"]:not([exists]) .downloadTarget {
+      color: hsl(0, 0%, 70%);
+  }
+  richlistitem.download-state .downloadDetails {
+      opacity: 1 !important;
+      color: hsl(0, 0%, 70%);
+  }
+}
+  

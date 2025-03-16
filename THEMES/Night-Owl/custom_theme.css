@@ -1,0 +1,562 @@
+/* A custom theme based on the VSCode Night Owl theme 
+A lot of the codes here is from: https://github.com/aminomancer/uc.css.js  */
+
+:root,
+menupopup {
+  /* Main color for background */
+  --firefoxcss-main-bg-color: hsl(207, 95%, 8%) !important;
+
+  /* Secondary color for url bar, active tab etc. */
+  --firefoxcss-secondary-bg-color: hsl(207, 71%, 15%) !important;
+
+  /* Color for borders */
+  --firefoxcss-border-color: hsl(211, 20%, 23%);
+  --firefoxcss-border-color-dimmed: hsla(211, 20%, 23%, 0.4);
+  --firefoxcss-border-color-highlight: hsl(200, 100%, 50%);
+
+  /* Button highlight */
+  --firefoxcss-button-hover-highlight: hsl(206, 70%, 20%);
+  --firefoxcss-button-select-highlight: hsl(206, 70%, 31%);
+
+  /* Tab colors */
+  --firefoxcss-tab-bg-color: hsl(207, 71%, 15%) !important;
+  --firefoxcss-tab-hover-bg-color: hsl(39, 35%, 26%) !important;
+  --firefoxcss-tab-active-bg-color: hsl(40, 10%, 20%) !important;
+  --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.85) !important;
+
+  --firefoxcss-select-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4) !important;
+  --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.1) !important;
+
+  /* Tab playing audio speaker icon colors */
+  --firefoxcss-tab-speaker-color: hsla(0, 0%, 80%) !important;
+  --firefoxcss-tab-speaker-icon-color: hsl(0, 0%, 100%) !important;
+  --firefoxcss-tab-speaker-icon-hover-color: hsl(0, 0%, 10%) !important;
+  --firefoxcss-tab-speaker-icon-small-background: hsla(0, 0%, 80%) !important;
+
+  /* Context menu colors */
+  --firefoxcss-context-menu-top-color: var(--firefoxcss-main-bg-color) !important;
+  /* Bookmarks bar colors */
+  --firefoxcss-bookmarks-bg-color: var(--firefoxcss-main-bg-color) !important;
+
+  /* Change background color when loading a page */
+  --firefoxcss-bright-flash-color: var(--firefoxcss-main-bg-color) !important;
+
+  --firefoxcss-new-tab-button-active: var(--firefoxcss-secondary-bg-color) !important;
+
+  --firefoxcss-new-tab-button-hover: var(--firefoxcss-button-hover-highlight) !important;
+
+  /* Search Bar and breakout (when in focus) colors */
+  --firefoxcss-url-dark-border: var(--firefoxcss-border-color) !important;
+  --firefoxcss-url-breakout-border-bottom-color: 1px solid var(--firefoxcss-border-color) !important;
+  --firefoxcss-url-breakout-border-top-color: 1px solid var(--firefoxcss-border-color) !important;
+  --firefoxcss-url-bar-bg-color: var(--firefoxcss-secondary-bg-color) !important;
+  --firefoxcss-url-breakout-bar-bg-color: var(--firefoxcss-secondary-bg-color) !important;
+  --firefoxcss-url-autocomplete-highlight: hsl(240, 2%, 26%) !important;
+
+  /* Other colors */
+  --firefoxcss-urlbar-zoom-button: hsla(0, 0%, 60%, 0.35) !important;
+  --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 6%, 0.75) !important;
+  --firefoxcss-private-browsing-menu-color: hsl(277, 70%, 64%) !important;
+  --firefoxcss-private-browsing-drop-shadow: drop-shadow(0px 0px 1px #000000d5) !important;
+  --firefoxcss-statuspanel-bg-color: var(--firefoxcss-secondary-bg-color) !important;
+  --firefoxcss-contextmenu-hover-text: white !important;
+  --firefoxcss-customize-view-dashed-outline: hsla(0, 0%, 100%, 0.25) !important;
+  --firefoxcss-customize-view-flex-space: #d0ba9e !important;
+  --firefoxcss-customize-view-overflow-menu: hsl(240, 2%, 10%) !important;
+
+  /* ============== Firefox Global colors change ==================== */
+  /* Hamburger menu button hover color */
+  --panel-item-hover-bgcolor: hsla(0, 0%, 60%, 0.25) !important;
+  --toolbar-bgcolor: var(--firefoxcss-main-bg-color) !important;
+  --arrowpanel-background: var(--firefoxcss-secondary-bg-color) !important;
+  --toolbarbutton-hover-background: var(--firefoxcss-button-hover-highlight)!important;
+  --toolbarbutton-active-background: var(--firefoxcss-button-select-highlight) !important;
+  --button-hover-bgcolor: var(--firefoxcss-button-hover-highlight) !important;
+  --button-active-bgcolor: var(--firefoxcss-button-select-highlight) !important;
+  --button-bgcolor: var(--firefoxcss-button-hover-highlight) !important;
+  --arrowpanel-border-color: var(--firefoxcss-border-color) !important;
+  --panel-separator-color: var(--firefoxcss-border-color-dimmed) !important;
+  --panel-separator-zap-gradient: var(--firefoxcss-border-color-dimmed) !important;
+  --lwt-sidebar-background-color: var(--firefoxcss-secondary-bg-color) !important;
+
+  /* URL and Search bar */
+  --urlbarView-highlight-background: var(--firefoxcss-button-select-highlight) !important;
+  --urlbarView-hover-background: var(--firefoxcss-button-hover-highlight) !important;
+  /* Color for add bookmarks menu when adding through tabs */
+  --in-content-page-background: var(--firefoxcss-secondary-bg-color) !important;
+  --firefoxcss-context-menu-item-bg-color: var(--firefoxcss-button-select-highlight) !important;
+
+  /* Color for add bookmarks menu when opening through the star button */
+  --button-background-color: var(--firefoxcss-secondary-bg-color) !important;
+  --button-background-color-hover: var(--firefoxcss-button-hover-highlight) !important;
+  --button-background-color-active: var(--firefoxcss-button-select-highlight) !important;
+
+  /* Input textbox */
+  --input-bgcolor: var(--firefoxcss-secondary-bg-color) !important;
+
+  /* App Menu Colors */
+  --panel-item-bgcolor: var(--firefoxcss-main-bg-color) !important;
+  --panel-item-hover-bgcolor: var(--firefoxcss-button-hover-highlight) !important;
+  --panel-item-active-bgcolor: var(--firefoxcss-button-select-highlight) !important;
+
+  /* Special buttons, ex: Bookmark panel's buttons */
+  --button-primary-bgcolor: hsl(200, 100%, 42%) !important;
+  --button-primary-hover-bgcolor: hsl(200, 100%, 50%) !important;
+  --button-primary-active-bgcolor: hsl(200, 100%, 35%) !important;
+  /* --button-primary-color: var(--button-color) !important; */
+
+  /* Textbox highlight */
+  --color-accent-primary: hsl(200, 100%, 50%) !important;
+  --color-accent-primary-hover: hsl(200, 100%, 42%) !important;
+  --color-accent-primary-active: hsl(200, 100%, 35%) !important;
+
+  /* Bookmark star color */
+  --toolbarbutton-icon-fill-attention: var(--firefoxcss-border-color-highlight) !important;
+
+  /* ========================== Other =============================== */
+  --search-box-focus-outline-color: var(--firefoxcss-border-color-highlight) !important;
+  --firefoxcss-box-border-radius: 2.6px !important;
+}
+
+/*=====================================================================
+========================= S E T   C O L O R S =========================
+=====================================================================*/
+
+/* Sidebar background color change */
+#browser #sidebar-box {
+  --sidebar-background-color: var(--firefoxcss-main-bg-color) !important;
+}
+
+/*=====================================================================
+------------------- S E A R C H   B A R -------------------------------
+=====================================================================*/
+
+#urlbar-background,
+#searchbar {
+  border: 1px solid #2f3a46 !important;
+}
+
+/*=====================================================================
+============================= T A B S =================================
+=====================================================================*/
+
+/* Completely remove line between website content and top bar */
+:root {
+  --firefoxcss-top-bar-border-bottom-size: 0px !important;
+}
+
+/* Add a line seperator between tab bar and web content that disappear when bookmark bar is visible,
+ and instead show a line between the bookmark bar and web content */
+#TabsToolbar {
+  position: relative;
+}
+#TabsToolbar:not([customizing])::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--firefoxcss-border-color);
+  transition: bottom 300ms ease-in-out 200ms !important;
+}
+#navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #TabsToolbar:not([customizing])::after,
+#navigator-toolbox:has(.bookmark-item[open]) > #TabsToolbar:not([customizing])::after {
+  bottom: calc(0px - (var(--uc-bm-height) + 2*var(--uc-bm-padding)));
+  transition: bottom 300ms ease-in-out 200ms !important;
+}
+
+/* Bookmark bar separator */
+#PersonalToolbar:not([customizing])::after {
+  content: ""; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--firefoxcss-border-color);
+  opacity: 0 !important;
+  transition: opacity 100ms ease-in-out 400ms !important;
+}
+
+#navigator-toolbox:hover > #PersonalToolbar:not([customizing])::after {
+  opacity: 1 !important;
+}
+
+/*=====================================================================
+====================== C O N T E X T   M E N U ========================
+=====================================================================*/
+
+menupopup,
+panel {
+  :not(#ContentSelectDropdown) > & {
+    --panel-background: var(--firefoxcss-main-bg-color) !important;
+  }
+}
+
+/*=====================================================================
+========================== S I D E   B A R S ==========================
+=====================================================================*/
+
+/* Remove the bottom border line separating the header and body of sidebar */
+#sidebar-header {
+  border-bottom: 0 solid transparent !important;
+}
+
+/* Change sidebar search box color */
+:where(#sidebar-search-container, .sidebar-search-container) search-textbox {
+  appearance: none !important;
+  border-radius: var(--firefoxcss-box-border-radius) !important;
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
+  color: currentColor !important;
+  min-height: 25px !important;
+  margin: 0 !important;
+  outline: 1px solid var(--firefoxcss-border-color) !important;
+  transition: 100ms outline ease-in !important;
+}
+/* animate the purple focus outline & background */
+:is(#sidebar-search-container, .sidebar-search-container) search-textbox:focus {
+  outline: 2px solid var(--firefoxcss-border-color-highlight) !important;
+  transition-duration: 60ms !important;
+  transition-timing-function: ease-out !important;
+}
+#viewButton {
+  border-radius: var(--firefoxcss-box-border-radius) !important;
+  outline: 0.5px solid var(--firefoxcss-border-color) !important;
+  background: transparent !important;
+}
+#viewButton > .button-box > dropmarker {
+  margin-inline-start: 4px !important;
+}
+#viewButton:hover {
+  background-color: var(--firefoxcss-button-hover-highlight) !important;
+}
+#viewButton:is(:active, [open]) {
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+}
+
+/* Remove the glow outline */
+.sidebar-placesTreechildren::-moz-tree-row,
+.sidebar-placesTreechildren::-moz-tree-row(current, focus),
+.sidebar-placesTreechildren::-moz-tree-row(selected, current, focus) {
+  border: none !important;
+  outline: none !important;
+}
+.sidebar-placesTreechildren::-moz-tree-row(selected, current, focus) {
+  border: none !important;
+  outline: none !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell {
+  border-radius: var(--firefoxcss-box-border-radius) !important;
+  margin-inline: 6px !important;
+  cursor: default !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row {
+  min-height: 26px !important;
+  background: none !important;
+  padding-block: 1px !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(empty) {
+  min-height: 0 !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(hover) {
+  background-color: var(--firefoxcss-button-hover-highlight) !important;
+  outline: none !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(selected) {
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.sidebar-panel:-moz-window-inactive .sidebar-placesTreechildren::-moz-tree-cell(selected) {
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+}
+
+.sidebar-panel:-moz-window-inactive .sidebar-placesTreechildren::-moz-tree-cell(selected, hover) {
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+  outline: none !important;
+}
+
+.sidebar-panel .sidebar-placesTreechildren::-moz-tree-cell(cutting, selected),
+.sidebar-panel .sidebar-placesTreechildren::-moz-tree-cell(cutting, hover) {
+  background-color: color-mix(in srgb, transparent 50%, var(--firefoxcss-button-hover-highlight)) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text {
+  padding-right: 7px !important;
+  cursor: default !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text,
+.sidebar-placesTreechildren::-moz-tree-image,
+.sidebar-placesTreechildren::-moz-tree-twisty {
+  color: var(--lwt-text-color) !important;
+  cursor: default !important;
+}
+
+@-moz-document url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+  body {
+    background-color: var(--firefoxcss-main-bg-color) !important;
+    color: var(--lwt-text-color) !important;
+    fill: currentColor !important;
+  }
+}
+
+/*=====================================================================
+============================= O T H E R ===============================
+=====================================================================*/
+
+tree {
+  background-color: var(--firefoxcss-main-bg-color) !important;
+}
+
+/*==================== Tooltips ====================*/
+tooltip {
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
+  color: var(--tooltip-color) !important;
+}
+
+#statuspanel-label {
+  border-radius: 4px !important;
+  border: 1px solid var(--firefoxcss-border-color) !important;
+  margin: 0 0 3px 3px !important;
+  padding: 4px !important;
+}
+
+tooltip > description,
+.places-tooltip-box,
+tooltip .uc-tooltip-box {
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
+  color: var(--tooltip-color) !important;
+  border-radius: var(--firefoxcss-box-border-radius) !important;
+  box-shadow: var(--firefoxcss-private-browsing-drop-shadow) !important;
+}
+
+.places-tooltip {
+  background: transparent !important;
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
+
+  description:empty {
+    &:not([value], [id]),
+    &[value=""]:not([id]) {
+      display: none !important;
+    }
+  }
+}
+
+.places-tooltip-box > hbox {
+  display: flex !important;
+  align-items: center !important;
+  color: var(--panel-shortcut-color) !important;
+}
+
+.places-tooltip-uri {
+  color: var(--panel-shortcut-color) !important;
+}
+
+.places-tooltip-title[hidden="true"] ~ .places-tooltip-uri {
+  color: inherit !important;
+}
+
+/*==================== High contrast Buttons ====================*/
+/* Taken from: https://github.com/aminomancer/uc.css.js/blob/master/resources/layout/uc-nsRules.au.css */
+.panel-footer > button {
+  &:not([disabled]) {
+    &[default],
+    &.primary {
+      color: var(--button-primary-color) !important;
+      background-color: var(--button-primary-bgcolor) !important;
+
+      &:hover,
+      &:focus-visible {
+        background-color: var(--button-primary-hover-bgcolor) !important;
+      }
+
+      &:hover:active {
+        background-color: var(--button-primary-active-bgcolor) !important;
+      }
+    }
+  }
+}
+
+/*==================== Edit Bookmark Panel ====================*/
+#editBookmarkPanel treechildren::-moz-tree-row(hover) {
+  appearance: none !important;
+  background-color: var(--firefoxcss-button-hover-highlight) !important;
+  line-height: normal;
+  color: var(--toolbar-color) !important;
+  border: none !important;
+}
+
+#editBookmarkPanel treechildren::-moz-tree-row(selected) {
+  appearance: none !important;
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+  line-height: normal;
+  color: var(--toolbar-color) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+#editBookmarkPanel treechildren::-moz-tree-row(selected, focus) {
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+}
+
+#editBookmarkPanel treechildren::-moz-tree-row(selected):hover {
+  appearance: none !important;
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+  line-height: normal;
+  color: var(--toolbar-color) !important;
+  border: none !important;
+}
+
+#editBookmarkPanel treechildren::-moz-tree-cell-text(selected),
+#editBookmarkPanel treechildren::-moz-tree-image(selected),
+#editBookmarkPanel treechildren::-moz-tree-twisty(selected) {
+  appearance: none !important;
+  background-color: transparent !important;
+  line-height: normal;
+  color: var(--toolbar-color) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/*==================== App Menu Separator ====================*/
+#appMenu-fxa-separator {
+  border-image: 1 1 1 1 linear-gradient(to right,
+  hsl(202, 75%, 11%) 0%,
+  hsl(206, 70%, 31%) 30%,
+  hsl(200, 100%, 50%),
+  hsl(206, 70%, 31%) 70%,
+  hsl(202, 75%, 11%) 100%) !important;
+}
+
+/*==================== Library: History, Download, Bookmarks ====================*/
+@-moz-document url-prefix("chrome://browser/content/places/places.xhtml"), url-prefix("about:downloads") {
+  :root {
+    --in-content-button-background-disabled: hsla(0, 20%, 80%, 0.12);
+    --in-content-button-background-hover: var(--firefoxcss-button-hover-highlight) !important;
+    --in-content-button-background-active: var(--firefoxcss-button-select-highlight) !important;
+    --in-content-button-background-bold: var(--firefoxcss-border-color-highlight) !important;
+    --in-content-border-color: var(--dialog-box-border-color) !important;
+    --in-content-border-hover: var(--dialog-box-border-hover) !important;
+    --in-content-box-background: var(--firefoxcss-main-bg-color) !important;
+    --in-content-box-background-odd: var(--firefoxcss-main-bg-color) !important;
+    --in-content-box-background-dim: var(--firefoxcss-main-bg-color) !important;
+    --arrowpanel-dimmed: color-mix(in srgb, currentColor 17%, transparent) !important;
+    --arrowpanel-dimmed-further: color-mix(in srgb, currentColor 25%, transparent) !important;
+    --arrowpanel-dimmed-even-further: color-mix(in srgb, currentColor 30%, transparent) !important;
+    --organizer-color: var(--plaintext-color) !important;
+    --organizer-hover-color: var(--plaintext-color) !important;
+    --organizer-selected-color: var(--in-content-primary-button-text-color) !important;
+    --organizer-focus-selected-color: var(--in-content-primary-button-text-color) !important;
+    --organizer-deemphasized-color: color-mix(in srgb, var(--plaintext-color) 75%, transparent) !important;
+    --organizer-toolbar-background: var(--firefoxcss-main-bg-color) !important;
+    --organizer-pane-background: var(--firefoxcss-main-bg-color) !important;
+    --organizer-content-background: var(--firefoxcss-main-bg-color) !important;
+    --organizer-hover-background: var(--firefoxcss-button-hover-highlight) !important;
+    --organizer-selected-background: var(--firefoxcss-button-select-highlight) !important;
+    --organizer-selected-active-background: var(--firefoxcss-button-select-highlight) !important;
+    --organizer-selected-focus-background: var(--firefoxcss-button-select-highlight) !important;
+    --organizer-outline-color: var(--firefoxcss-border-color-highlight) !important;
+    --organizer-border-color: var(--firefoxcss-border-color) !important;
+    --organizer-toolbar-field-background: var(--firefoxcss-secondary-bg-color) !important;
+    --organizer-toolbar-field-border-color: var(--firefoxcss-border-color) !important;
+    --organizer-toolbar-field-background-focused: var(--firefoxcss-secondary-bg-color) !important;
+    --organizer-separator-color: var(--firefoxcss-border-color-dimmed) !important;
+    --organizer-toolbar-field-focus-border-color: var(--firefoxcss-border-color-highlight) !important;
+    --organizer-toolbar-field-focus-box-shadow: 0 0 0 0.5px var(--organizer-toolbar-field-focus-border-color) inset !important;
+    --organizer-pane-field-border-color: var(--firefoxcss-border-color) !important;
+    --download-button-hover-bg: hsla(230, 8%, 80%, 0.12);
+  }
+
+  #placesToolbar > toolbarbutton,
+  #placesMenu > menu,
+  #searchFilter {
+    border-radius: var(--firefoxcss-box-border-radius) !important;
+  }
+
+  #placesToolbar > toolbarbutton:is(:hover, :focus-visible):not([disabled="true"]) {
+    background-color: var(--organizer-hover-background) !important;
+    color: var(--organizer-hover-color) !important;
+  }
+
+  #placesMenu > menu > .menubar-text {
+    background-size: 12px !important;
+    padding-inline-end: 16px !important;
+  }
+
+  #searchFilter[focused] {
+    outline-color: var(--organizer-toolbar-field-focus-border-color) !important;
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+    outline-offset: 0 !important;
+  }
+
+  #places input[type="text"]:focus {
+    outline: 2px solid var(--organizer-outline-color) !important;
+    outline-offset: -1px !important;
+  }
+
+  #contentView treecol {
+    box-shadow: inset 0 -1px var(--organizer-border-color);
+  }
+
+  tree {
+    appearance: none !important;
+    margin: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  treecol,
+  treecolpicker {
+    background-color: var(--organizer-pane-background) !important;
+    border-color: var(--organizer-border-color) !important;
+  }
+
+  :is(treecol, treecolpicker):where(:hover) {
+    background-color: var(--organizer-hover-background) !important;
+  }
+
+  :is(treecol, treecolpicker):where(:hover:active) {
+    background-color: var(--organizer-selected-background) !important;
+  }
+
+  menubar > menu[_moz-menuactive="true"]:not([disabled="true"]) {
+    background-color: var(--organizer-hover-background) !important;
+    color: var(--organizer-hover-color) !important;
+  }
+
+  treechildren::-moz-tree-row(selected),
+  treechildren::-moz-tree-row(current, focus) {
+    background-color: var(--organizer-selected-background) !important;
+    outline: none !important;
+  }
+
+  treechildren::-moz-tree-row(selected, hover),
+  treechildren::-moz-tree-row(current, focus, hover) {
+    background-color: var(--organizer-selected-active-background) !important;
+  }
+
+  treechildren::-moz-tree-row(selected, focus),
+  treechildren::-moz-tree-row(current, selected, focus) {
+    background-color: var(--organizer-selected-focus-background) !important;
+  }
+
+  treechildren::-moz-tree-cell(cutting, selected),
+  treechildren::-moz-tree-cell(cutting, hover) {
+    background-color: color-mix(in srgb, transparent 50%, var(--organizer-selected-background)) !important;
+  }
+
+  treechildren::-moz-tree-cell-text(primary, dropOn) {
+    background-color: var(--organizer-selected-background) !important;
+  }
+}

@@ -188,14 +188,15 @@
   }
 
   /* Toolbar Buttons */
-    --toolbarbutton-outer-padding: 2px !important; /* Default: 2px */
-    --toolbarbutton-inner-padding: 6px !important; /* Default: 8px */
+  --toolbarbutton-outer-padding: 2px !important; /* Default: 2px */
+  --toolbarbutton-inner-padding: 6px !important; /* Default: 8px */
 
   /* Menu items */
   --arrowpanel-menuitem-padding-block: 4px !important; /* Default: 8px */
   --arrowpanel-menuitem-padding-inline: 4px !important; /* Default: 8px */
 
   /* Bookmark bar */
+  --uc-bm-height: 24px;
   --uc-bm-padding: 6px;
   --uc-bm-margin-bottom: 4px;
 
