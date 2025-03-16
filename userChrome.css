@@ -115,7 +115,7 @@
     --toolbar-field-color: hsla(0, 0%, 80%, 0.80) !important; /* Internal Firefox value to set color for the urlbar text */
     --firefoxcss-urlbar-zoom-button: hsla(0, 0%, 60%, 0.35);
     --firefoxcss-top-bar-border-bottom-color: hsla(0, 0%, 6%, 0.2);
-    --firefoxcss-private-browsing-menu-color: hsl(277, 70%, 64%);
+    --firefoxcss-private-browsing-menu-color: hsl(276, 100%, 42%);
     --firefoxcss-private-browsing-drop-shadow: drop-shadow(
       0px 0px 1px #000000d5
     );
@@ -127,7 +127,7 @@
 
     /* ============== Firefox Global colors change ==================== */
     /* Hamburger menu button hover color */
-    --panel-item-hover-bgcolor: hsla(0, 0%, 60%, 0.25) !important;
+    --panel-item-hover-bgcolor: hsla(0, 57%, 40%, 0.25) !important;
     --toolbar-bgcolor: var(--firefoxcss-main-bg-color) !important;
     --arrowpanel-background: var(--firefoxcss-secondary-bg-color) !important;
     --toolbarbutton-hover-background: hsla(0, 0%, 60%, 0.35)!important;
@@ -136,8 +136,6 @@
     --button-active-bgcolor: hsla(0, 0%, 45%, 0.35) !important;
     --button-bgcolor: hsla(0, 0%, 45%, 0.9) !important;
     --arrowpanel-border-color: hsla(0, 0%, 50%, 0.25) !important;
-    --dark-menu-background-color: #222121 !important;
-    --dark-menu-border-color: rgb(55, 55, 55) !important;
     --dark-menu-background-color: #222121 !important;
     --dark-menu-border-color: rgb(55, 55, 55) !important;
     --dark-menuitem-hover-background-color: rgba(
@@ -188,8 +186,8 @@
   }
 
   /* Toolbar Buttons */
-  --toolbarbutton-outer-padding: 2px !important; /* Default: 2px */
-  --toolbarbutton-inner-padding: 6px !important; /* Default: 8px */
+    --toolbarbutton-outer-padding: 2px !important; /* Default: 2px */
+    --toolbarbutton-inner-padding: 6px !important; /* Default: 8px */
 
   /* Menu items */
   --arrowpanel-menuitem-padding-block: 4px !important; /* Default: 8px */
@@ -201,7 +199,7 @@
   --uc-bm-margin-bottom: 4px;
 
   /* Fonts: Use custom font family, fallback to a generic monospace font if fail */
-  --custom-font: CommitMono Nerd Font, CommitMono Nerd Font Mono, monospace;
+  --custom-font: CommitMono Nerd Font, CommitMono Nerd Font Mono, -moz-fixed, monospace;
 }
 
 /*=====================================================================
@@ -347,10 +345,9 @@ Order of Toolbars
 about:config -> svg.context-properties.content.enabled -> true*/
 @media (prefers-color-scheme: dark) {
   #PanelUI-menu-button {
-    list-style-image: url(ASSETS/icons/menu.svg) !important;
-  }
-  :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
-    list-style-image: url(ASSETS/icons/menu-private.svg) !important;
+    list-style-image: url(ASSETS/icons/night_owl.svg) !important;
+    fill: white !important;
+    opacity: 1 !important;
   }
 
   #find-button {
@@ -1030,8 +1027,24 @@ toolbar
   padding-right: 0px !important;
 }
 
-:root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
-  fill: var(--firefoxcss-private-browsing-menu-color) !important;
+:root[privatebrowsingmode="temporary"] {
+  & #PanelUI-menu-button,
+  & #find-button,
+  & #privatebrowsing-button,
+  & #forward-button,
+  & menugroup > #context-forward,
+  & #search-container #searchbar .search-go-button,
+  & #urlbar-go-button,
+  & #back-button,
+  & enugroup > #context-back,
+  & #stop-reload-button,
+  & #reload-button,
+  & #stop-button,
+  & #downloads-button,
+  & #unified-extensions-button,
+  & #preferences-button {
+    fill: var(--firefoxcss-private-browsing-menu-color) !important;
+  }
 }
 
 :root[privatebrowsingmode="temporary"]

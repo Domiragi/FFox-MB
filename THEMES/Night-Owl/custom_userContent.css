@@ -1,0 +1,198 @@
+@-moz-document url("about:privatebrowsing") {
+  .logo-and-wordmark > .logo {
+    background-image: url("ASSETS/icons/night_owl_logo.svg") !important;
+  }
+  .logo-and-wordmark > .wordmark {
+    background: none !important;
+    width: unset !important;
+  }
+  .logo-and-wordmark > .wordmark::before {
+    content: "Night Owl";
+    font-size: 40pt;
+    color: var(--firefoxcss-logo-and-wordmark-color) !important;
+    font-family: var(--custom-font);
+    display: block;
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+}
+
+
+/*=========== Codes from: https://github.com/aminomancer/uc.css.js/blob/master/resources/in-content/system.css ===========*/
+
+@-moz-document regexp("view-source:.*") {
+  @media (prefers-color-scheme: dark) {
+    ::selection {
+      color: var(--content-selection-color) !important;
+      background-color: var(--content-selection-bgcolor) !important;
+    }
+  
+    .highlight :is(.start-tag, .end-tag)::selection {
+      color: #801f1f !important;
+    }
+  
+    .highlight .comment::selection {
+      color: #235c23 !important;
+    }
+  
+    .highlight .cdata::selection {
+      color: #77254e !important;
+    }
+  
+    .highlight :is(.doctype, .markupdeclaration)::selection {
+      color: #555 !important;
+    }
+  
+    .highlight .entity::selection {
+      color: #884026 !important;
+    }
+  
+    .highlight .attribute-value::selection {
+      color: #233d6d !important;
+    }
+  
+    .highlight .pi::selection {
+      color: #6b228f !important;
+    }
+  
+    .highlight .error::selection {
+      text-decoration-color: #801f1f !important;
+    }
+  }
+}
+  
+@-moz-document regexp("^(about:|chrome:|moz-extension:).*") {
+  html:not([role="dialog"]),
+  html:not([role="dialog"]) *,
+  html:not([role="dialog"]) body.activity-stream,
+  window:not([chromehidden]),
+  window:not([chromehidden]) > dialog,
+  #downloadsListBox richlistitem,
+  info-item,
+  info-group,
+  certificate-section {
+    --in-content-page-background: var(--firefoxcss-main-bg-color) !important;
+    --in-content-page-color: hsl(212, 43%, 90%)!important;
+    --in-content-text-color: var(--in-content-page-color) !important;
+    --in-content-accent-color: var(--firefoxcss-border-color-highlight) !important;
+    --in-content-border-color: var(--firefoxcss-border-color) !important;
+    --in-content-border-hover: var(--firefoxcss-border-color) !important;
+    --in-content-border-active: var(--firefoxcss-border-color-highlight) !important;
+    --in-content-box-background: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-box-background-odd: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-box-background-dim: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-box-border-color: var(--firefoxcss-border-color) !important;
+    --in-content-box-info-background: var(--firefoxcss-secondary-bg-color) !important;
+    --background-color-box: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-table-background: var(--firefoxcss-secondary-bg-color) !important;
+    --in-content-table-header-background: var(--color-accent-primary-active) !important;
+    /* --in-content-link-color: var(--purple-30) !important;
+    --in-content-link-color-hover: var(--purple-25) !important;
+    --in-content-link-color-active: var(--purple-20) !important;
+    --in-content-link-visited-color: var(--pink-40) !important;
+    --in-content-link-visited-color-hover: var(--pink-35) !important;
+    --in-content-link-visited-color-active: var(--pink-30) !important;
+    --link-color: var(--purple-30) !important;
+    --link-color-hover: var(--purple-25) !important;
+    --link-color-active: var(--purple-20) !important;
+    --link-visited-color: var(--pink-40) !important;
+    --link-visited-color-hover: var(--pink-35) !important;
+    --link-visited-color-active: var(--pink-30) !important; */
+    --button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
+    --button-background-hover: var(--color-accent-primary-hover) !important;
+    --button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --button-background-solid: var(--firefoxcss-button-select-highlight);
+    --in-content-button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
+    --in-content-button-background-hover: var(--color-accent-primary-hover) !important;
+    --in-content-button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --in-content-button-background-solid: var(--firefoxcss-button-select-highlight);
+    --in-content-button-text-color: var(--ui-text-50) !important;
+    --in-content-button-text-color-hover: var(--ui-text-50) !important;
+    --in-content-button-text-color-active: var(--ui-text-50) !important;
+    --in-content-primary-button-background: color-mix(in hsl, var(--color-accent-primary-active), black 30%) !important;
+    --in-content-primary-button-background-hover: var(--color-accent-primary-hover) !important;
+    --in-content-primary-button-background-active: color-mix(in hsl, var(--color-accent-primary-active) 30%, black 30%) !important;
+    --in-content-primary-button-text-color: hsl(198, 100%, 9%) !important;
+    --in-content-primary-button-text-color-hover: hsl(198, 100%, 9%) !important;
+    --in-content-button-border-radius: var(--general-button-border-radius) !important;
+    --in-content-item-selected: var(--firefoxcss-button-select-highlight) !important;
+    --in-content-item-hover: var(--firefoxcss-button-hover-highlight) !important;
+    --in-content-item-hover-text: var(--ui-text-80) !important;
+    --focus-outline-color: var(--firefoxcss-border-color-highlight) !important;
+    --focus-outline-offset: 2px !important;
+    --default-focusring: 1px solid var(--firefoxcss-border-color-highlight) !important;
+    --newtab-background-color: var(--in-content-page-background) !important;
+    --newtab-text-primary-color: var(--in-content-page-color) !important;
+    --lwt-sidebar-background-color: var(--in-content-box-background) !important;
+    --lwt-sidebar-text-color: var(--in-content-page-color) !important;
+    --newtab-search-header-background-color: color-mix(in srgb, var(--in-content-page-background) 70%, transparent) !important;
+    --newtab-search-header-background-intermediate: color-mix(in srgb, var(--in-content-page-background) 80%, transparent) !important;
+    --newtab-seperator-line-color: var(--in-content-button-background-hover) !important;
+    --newtab-modal-color: var(--in-content-box-background) !important;
+    /* --newtab-focus-outline: var(--purple-40-a50) !important;
+    --newtab-focus-border: var(--purple-40) !important;
+    --newtab-focus-border-selected: var(--purple-30) !important; */
+    --newtab-textbox-background-color: var(--in-content-button-background) !important;
+    /* --newtab-textbox-focus-color: var(--purple-40) !important; */
+    --newtab-primary-action-background: var(--in-content-primary-button-background-hover) !important;
+    --newtab-primary-action-background-hover: color-mix(in srgb, var(--purple-30) 60%, var(--newtab-primary-action-background)) !important;
+    --newtab-primary-action-background-active: color-mix(in srgb, var(--purple-25) 60%, var(--newtab-primary-action-background)) !important;
+    --newtab-primary-element-text-color: var(--ui-text-80) !important;
+    --newtab-element-secondary-color: var(--in-content-button-background-hover) !important;
+    --newtab-element-secondary-color-hover: color-mix(in srgb, var(--ui-text-40) 50%, var(--in-content-button-background-solid)) !important;
+    --newtab-element-secondary-color-active: color-mix(in srgb, var(--ui-text-50) 50%, var(--in-content-button-background-solid)) !important;
+    --newtab-button-primary-color: var(--in-content-primary-button-background-hover) !important;
+    --newtab-border-primary-color: var(--in-content-button-background-active) !important;
+    --newtab-background-color-secondary: var(--in-content-button-background-solid) !important;
+    --newtab-card-active-outline-color: var(--in-content-button-background) !important;
+    /* --newtab-link-primary-color: var(--in-content-link-color-active) !important;
+    --newtab-link-secondary-color: var(--in-content-link-color) !important; */
+    --newtab-topsites-background-color: var(--in-content-button-background) !important;
+    --customize-menu-background: var(--in-content-box-background) !important;
+    --customize-menu-secondary-action-background: var(--in-content-button-background) !important;
+    --customize-menu-secondary-action-background-hover: var(--in-content-button-background-hover) !important;
+    --customize-menu-secondary-action-background-active: var(--in-content-button-background-active) !important;
+    --customize-menu-first-shadow: hsla(250, 3%, 2%, 0.2) !important;
+    --customize-menu-second-shadow: hsla(250, 3%, 2%, 0.4) !important;
+    --newtab-contextmenu-background-color: var(--in-content-table-background) !important;
+    --newtab-contextmenu-button-color: var(--in-content-box-background) !important;
+    --newtab-card-background-color: var(--in-content-box-background) !important;
+    --newtab-card-placeholder-color: var(--in-content-box-background) !important;
+    --newtab-search-text-color: var(--ui-text-70) !important;
+    --newtab-search-first-shadow: rgba(21, 20, 26, 0.5);
+    --newtab-search-second-shadow: rgba(21, 20, 26, 0.75);
+  }
+}
+  
+  /* firefox screenshots addon overlay */
+@-moz-document regexp("^moz-extension://.*/blank.html.*") {
+  :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container {
+    background-color: var(--firefoxcss-main-bg-color) !important;
+    height: 88px !important;
+    box-shadow: 0 0 0 1px rgba(12, 12, 13, 0.1), 0 0 8px rgba(12, 12, 13, 0.1) !important;
+  }
+  
+  :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container button {
+    color: hsl(212, 43%, 90%) !important;
+    background-color: transparent !important;
+    border-radius: var(--firefoxcss-box-border-radius) !important;
+    padding: 54px 5px 5px !important;
+    stroke: var(--firefoxcss-border-color-highlight) !important;
+    fill: hsl(0, 0%, 93%) !important;
+    appearance: none !important;
+    -moz-context-properties: fill, stroke !important;
+  }
+  
+  :root[uc-extension-id="screenshots@mozilla.org"] .all-buttons-container button:hover {
+    background-color: hsla(240, 3%, 70%, 0.1) !important;
+    border: 1px solid hsla(240, 3%, 70%, 0.1) !important;
+  }
+  
+  :root[uc-extension-id="screenshots@mozilla.org"] .pixel-dimensions {
+    margin-block-start: -5px;
+    margin-inline-start: -5px;
+    color: #fff !important;
+    text-shadow: 0.5px 0.5px 0.5px black, 0 0 1px black, 0 0 1px black !important;
+  }
+}
+  
