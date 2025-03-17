@@ -243,7 +243,7 @@ Order of Toolbars
 #PersonalToolbar {
 /*   background-color: var(--firefoxcss-bookmarks-bg-color) !important; */
 /*   backdrop-filter: blur(10px) !important; */
-  background-color: var(--firefoxcss-item-bg-color) !important;
+  background-color: var(--firefoxcss-secondary-bg-color) !important;
 }
 
 @media not (-moz-bool-pref: "sidebar.revamp") {
