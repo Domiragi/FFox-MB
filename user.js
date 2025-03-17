@@ -29,7 +29,7 @@ user_pref("browser.download.always_ask_before_handling_new_types", false);
 user_pref("browser.download.autohideButton", true);
 user_pref("browser.download.folderList", 2);
 user_pref("browser.download.forbid_open_with", false);
-user_pref("browser.download.open_pdf_attachments_inline", true); // Open PDF link in a new tab instead of instantly downloading
+user_pref("browser.download.open_pdf_attachments_inline", false); // Open PDF link in a new tab instead of instantly downloading. Default: false
 user_pref("browser.download.panel.shown", true);
 user_pref("browser.download.start_downloads_in_tmp_dir", false);
 user_pref("browser.download.useDownloadDir", false); // Ask everytime where to save file
@@ -151,7 +151,7 @@ user_pref("ui.textHighlightBackground", "#ff9632"); // Highlight search color, c
 user_pref("ui.textHighlightForeground", "#000000"); // Highlight search color, current selected result text
 user_pref("ui.textSelectAttentionBackground", "#f700a2"); // Highlight search color, all results
 user_pref("ui.textSelectAttentionForeground", "#000000"); // Highlight search color, all results'texts
-user_pref("webgl.disabled", true);
+user_pref("webgl.disabled", false);
 user_pref("webgl.renderer-string-override", " ");
 user_pref("webgl.vendor-string-override", " ");
 user_pref("widget.non-native-theme.gtk.scrollbar.thumb-size", 0.825); // Resize scrollbar. Default: 0.75
