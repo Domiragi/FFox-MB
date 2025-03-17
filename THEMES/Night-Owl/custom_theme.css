@@ -198,11 +198,13 @@ menupopup {
   height: 1px;
   background-color: var(--firefoxcss-border-color);
   opacity: 0 !important;
-  transition: opacity 100ms ease-in-out 400ms !important;
+  transition: opacity 300ms ease-in-out 200ms !important;
 }
 
-#navigator-toolbox:hover > #PersonalToolbar:not([customizing])::after {
+#navigator-toolbox:hover > #PersonalToolbar:not([customizing])::after,
+#navigator-toolbox:has(.bookmark-item[open]) > #PersonalToolbar:not([customizing])::after {
   opacity: 1 !important;
+  transition: opacity 300ms ease-in-out 200ms !important;
 }
 
 /*=====================================================================

@@ -26,57 +26,23 @@
 background-color: var(--firefoxcss-bookmarks-bg-color) !important;
 }
 
-#PersonalToolbar:not([customizing]) {
+#PersonalToolbar {
   margin-bottom: calc(
     2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)
   ) !important;
-  transform: rotateX(90deg) !important; 
-   transform-origin: top !important;
-  transition: transform 100ms linear 400ms !important;
-  z-index: 1 !important; 
+  opacity: 0 !important;
+  transform: rotateX(90deg) !important;
+  transform-origin: top !important;
+  transition: transform 300ms ease-in-out 200ms, opacity 300ms ease-in-out 200ms !important;
 }
 
 /* Show when cursor is over the toolbar area */
-#navigator-toolbox:hover > #PersonalToolbar,
-#navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]){
-  transition-delay: 100ms !important;
+#navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #PersonalToolbar,
+#navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]),
+#navigator-toolbox > #PersonalToolbar:has(.bookmark-item[open]),
+#PersonalToolbar[customizing] {
+  opacity: 1 !important;
   transform: rotateX(0) !important;
-}
-
-#PlacesToolbarItems > .bookmark-item {
-  padding-block: var(--uc-bm-padding) !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
-}
-
-#PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
-  transition: opacity 100ms linear 400ms !important;
-  opacity: 0 !important;
-}
-
-#PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
-  transition: opacity 100ms linear 400ms !important;
-  opacity: 0 !important;
-}
-
-#navigator-toolbox:hover
-  #PlacesToolbarItems
-  > .bookmark-item
-  .toolbarbutton-icon,
-#navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) 
-> .bookmark-item .toolbarbutton-icon{
-  transition-delay: 100ms !important;
-  opacity: 1 !important;
-}
-
-#navigator-toolbox:hover
-  #PlacesToolbarItems
-  > .bookmark-item
-  .toolbarbutton-text,
-#navigator-toolbox #PlacesToolbarItems:has(.toolbar-menupopup[dragstart]) 
-> .bookmark-item .toolbarbutton-text{
-  transition-delay: 100ms !important;
-  opacity: 1 !important;
 }
 
 

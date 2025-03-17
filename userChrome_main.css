@@ -22,7 +22,8 @@
 
 /*==== Bookmar Bar ====*/
 @import url("bookmarks_bar_same_color_as_toolbar.css");
-@import url("push_bookmarks_bar_on_hover.css");
+/* @import url("push_bookmarks_bar_on_hover.css"); */
+@import url("popout_bookmarks_bar_on_hover.css");
 @import url("remove_folder_icons_from_bookmarks.css");
 
 /*==== Miscs ====*/
