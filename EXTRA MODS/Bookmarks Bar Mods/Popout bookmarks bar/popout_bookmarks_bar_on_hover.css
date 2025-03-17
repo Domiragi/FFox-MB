@@ -1,10 +1,39 @@
-#PersonalToolbar {
+:root {
   --uc-bm-height: 24px;
-  /* Might need to adjust if the toolbar has other buttons */
   --uc-bm-padding: 6px;
-  /* Vertical padding to be applied to bookmarks */
+}
+
+/* Bookmarks bar background color */
+#navigator-toolbox #PersonalToolbar {
+background-color: var(--firefoxcss-bookmarks-bg-color) !important;
+}
+
+#PersonalToolbar {
+  margin-bottom: calc(
+    2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)
+  ) !important;
+  padding: 0px !important;
+  opacity: 0 !important;
+  transform: rotateX(90deg) !important;
+  transform-origin: top !important;
+  transition-property: transform, opacity, padding !important;
+  transition-duration: 300ms, 300ms, 0ms !important;
+  transition-delay: 200ms, 200ms, 500ms !important;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out !important;
+}
+
+/* Show when cursor is over the toolbar area */
+#navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #PersonalToolbar,
+#navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]),
+#navigator-toolbox > #PersonalToolbar:has(.bookmark-item[open]),
+#PersonalToolbar[customizing] {
   padding: 1px 6px !important;
-  position: relative;
+  opacity: 1 !important;
+  transform: rotateX(0) !important;
+  transition-property: transform, opacity, padding !important;
+  transition-duration: 300ms, 300ms, 0ms !important;
+  transition-delay: 200ms, 200ms, 200ms !important;
+  transition-timing-function: ease-in-out, ease-in-out, linear !important;
 }
 
 :root[uidensity="touch"] #PersonalToolbar {
@@ -20,29 +49,3 @@
 :root[inDOMFullscreen] #navigator-toolbox {
 --browser-area-z-index-toolbox: initial;
 }
-
-/* Bookmarks bar background color */
-#navigator-toolbox #PersonalToolbar {
-background-color: var(--firefoxcss-bookmarks-bg-color) !important;
-}
-
-#PersonalToolbar {
-  margin-bottom: calc(
-    2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)
-  ) !important;
-  opacity: 0 !important;
-  transform: rotateX(90deg) !important;
-  transform-origin: top !important;
-  transition: transform 300ms ease-in-out 200ms, opacity 300ms ease-in-out 200ms !important;
-}
-
-/* Show when cursor is over the toolbar area */
-#navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #PersonalToolbar,
-#navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]),
-#navigator-toolbox > #PersonalToolbar:has(.bookmark-item[open]),
-#PersonalToolbar[customizing] {
-  opacity: 1 !important;
-  transform: rotateX(0) !important;
-}
-
-
