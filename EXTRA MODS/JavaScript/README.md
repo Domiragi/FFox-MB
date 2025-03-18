@@ -24,6 +24,6 @@ After following the steps to install fx-autoconfig into your Firefox folders, pu
 Most scripts can be used as is, but some might require to make changes to CSS (your `userChrome.css` file), so make sure to read each file before use.
 
 The scripts I'm using are:
-- [Let Ctrl+W close pinned tabs](/EXTRA MODS/JavaScript/uc.css.js/JS/letCtrlWClosePinnedTabs.uc.js)
-- [Findbar mod](/EXTRA MODS/JavaScript/uc.css.js/JS/findbarMods.uc.js)
-- [Misc mods](/EXTRA MODS/JavaScript/uc.css.js/JS/miscMods.uc.js): a collection of several small mods
+- [Let Ctrl+W close pinned tabs](JavaScript/uc.css.js/JS/letCtrlWClosePinnedTabs.uc.js)
+- [Findbar mod](JavaScript/uc.css.js/JS/findbarMods.uc.js)
+- [Misc mods](JavaScript/uc.css.js/JS/miscMods.uc.js) - a collection of several small mods
