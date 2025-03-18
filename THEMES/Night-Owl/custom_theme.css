@@ -173,7 +173,7 @@ menupopup {
   position: relative;
 }
 #TabsToolbar:not([customizing])::after {
-  content: ""; 
+  content: "";
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -337,6 +337,24 @@ panel {
 
 tree {
   background-color: var(--firefoxcss-main-bg-color) !important;
+}
+
+/*==================== Window Buttons ====================*/
+
+.titlebar-buttonbox-container .titlebar-button:hover {
+  background-color: var(--firefoxcss-button-hover-highlight) !important;
+}
+
+.titlebar-buttonbox-container .titlebar-button:active {
+  background-color: var(--firefoxcss-button-select-highlight) !important;
+}
+
+.titlebar-buttonbox-container .titlebar-close:hover {
+  background-color: color-mix(in hsl, var(--firefoxcss-tab-border-highlight-selected-color) 80%, transparent) !important;
+}
+
+.titlebar-buttonbox-container .titlebar-close:active {
+  background-color: var(--firefoxcss-tab-border-highlight-selected-color) !important;
 }
 
 /*==================== Tooltips ====================*/
@@ -593,6 +611,7 @@ tooltip .uc-tooltip-box {
   --toolbarbutton-active-background: color-mix(in hsl, var(--firefoxcss-private-browsing-menu-color) 30%, var(--firefoxcss-secondary-bg-color) 30%) !important;
   --urlbarView-highlight-background: color-mix(in hsl, var(--firefoxcss-private-browsing-menu-color) 30%, var(--firefoxcss-secondary-bg-color) 30%) !important;
   --firefoxcss-tab-border-highlight-selected-color: var(--firefoxcss-private-browsing-menu-color) !important;
+  --toolbarbutton-icon-fill: var(--firefoxcss-private-browsing-menu-color) !important;
 
   /* URL bar */
   #urlbar {
@@ -623,5 +642,17 @@ tooltip .uc-tooltip-box {
   .tab-icon-image[src="chrome://browser/skin/privatebrowsing/favicon.svg"] { 
     content: url("ASSETS/icons/night_owl.svg") !important;
     color: var(--firefoxcss-logo-and-wordmark-color) !important;
+  }
+
+  /* Window Buttons */
+  .titlebar-buttonbox-container .titlebar-button {
+    color: var(--firefoxcss-private-browsing-menu-color) !important;
+  }
+  .titlebar-buttonbox-container .titlebar-button:active {
+    background-color: color-mix(in hsl, var(--firefoxcss-private-browsing-menu-color) 30%, var(--firefoxcss-secondary-bg-color) 30%) !important;
+  }
+  .titlebar-buttonbox-container .titlebar-close:active {
+    color: white !important;
+    background-color: var(--firefoxcss-logo-and-wordmark-color) !important;
   }
 }

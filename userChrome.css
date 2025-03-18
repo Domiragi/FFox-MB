@@ -1028,21 +1028,7 @@ toolbar
 }
 
 :root[privatebrowsingmode="temporary"] {
-  & #PanelUI-menu-button,
-  & #find-button,
-  & #privatebrowsing-button,
-  & #forward-button,
-  & menugroup > #context-forward,
-  & #search-container #searchbar .search-go-button,
-  & #urlbar-go-button,
-  & #back-button,
-  & enugroup > #context-back,
-  & #stop-reload-button,
-  & #reload-button,
-  & #stop-button,
-  & #downloads-button,
-  & #unified-extensions-button,
-  & #preferences-button {
+  & #PanelUI-menu-button {
     fill: var(--firefoxcss-private-browsing-menu-color) !important;
   }
 }
