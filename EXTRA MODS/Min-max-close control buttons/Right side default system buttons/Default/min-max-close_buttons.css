@@ -2,13 +2,17 @@
   --firefoxcss-control-buttons-margin: 100px !important;
 }
 
+#nav-bar .titlebar-buttonbox-container {
+  display: initial !important;
+}
+
 @media (-moz-platform: windows) {
   /* ----- Close/min/max fix ----- */
   #TabsToolbar .titlebar-buttonbox-container,
   #nav-bar .titlebar-buttonbox-container{
     padding-top: 3px !important;
     padding-bottom: 3px !important;
-    padding-right: 3px !important;
+    padding-right: 5px !important;
     padding-left: 3px !important;
   }
 
@@ -24,8 +28,13 @@
     padding: 10px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
-    margin-left: 0px !important;
+    margin-top: 2px !important;
+    margin-left: 5px !important;
     margin-right: 0px !important;
+    height: 28px !important;
+    min-height: 28px !important;
+    width: 28px !important;
+    min-width: 28px !important;
   }
 
   @media not (-moz-bool-pref: "firefoxcss.tabs.on.top.enable") {
@@ -49,7 +58,7 @@
     @media not (-moz-bool-pref: "sidebar.verticalTabs") {
 
 
-      #nav-bar {
+      /* #nav-bar {
         padding-right: var(--firefoxcss-control-buttons-margin) !important;
       }
 
@@ -61,7 +70,7 @@
         position: absolute !important;
         top: 1px;
         right: 0;
-      }
+      } */
 
 
       .titlebar-buttonbox-container .titlebar-min {
