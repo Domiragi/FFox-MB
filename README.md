@@ -39,6 +39,7 @@ If you are unfamiliar with customize Firefox, I strongly advise you to look up w
 3. Rename the files `userChrome_main.css` and `userContent_main.css` to `userChrome.css` and `userContent.css`.
 4. Using extra mods: Copy the `.css` files from the folders of the mods you want to use into the `chrome` folder. Some mods have specific instructions, so make sure to check the `README` files in those folder before use. The `userChrome_main.css` only imports the extra mods that I currently use, so you'll want to modify it for your personal use.
 5. To use JavaScript files, check the [README file](https://github.com/Domiragi/FFox-MB/tree/custom/EXTRA%20MODS/JavaScript) in the JavaScript folder.
+6. To use the Night Owl theme, copy the `.css` files from the Night-Owl folder into your `chrome` folder.
 
 # Extra Resources
 - https://www.userchrome.org/ : A good resource on `userChrome.css` and configuring Firefox.
