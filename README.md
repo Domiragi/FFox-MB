@@ -11,13 +11,12 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d82013ad-e813-4f6f-9080-4cb5d1829d73" alt="Night Owl Demo" width="70%"/>
+  <img src="https://github.com/user-attachments/assets/d82013ad-e813-4f6f-9080-4cb5d1829d73" alt="Night Owl Demo" width="85%"/>
 </p>
 
-
-
-
+<div style="text-align: justify">
 # About
+	
 This is a personalized fork of Firefox Mod-Blur, and my take on the [VSCode Night Owl theme](https://vscodethemes.com/e/sdras.night-owl/night-owl).
 
 The project uses Firefox Mod-Blur as the base structure, and have been modified (thanks to the codes from [uc.css.js](https://github.com/aminomancer/uc.css.js)) to extend its customization capabilities to many parts of the internal system. Although the color scheme takes inspiration from the Night Owl theme, I only use a selected number of main colors that I like from Night Owl for this project to create a more coherent look.
@@ -67,3 +66,5 @@ If you are unfamiliar with customize Firefox, I strongly advise you to look up w
 - [ ] Config the Autoscroll Icon
 
 </details>
+
+</div>
