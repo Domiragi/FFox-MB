@@ -154,5 +154,5 @@ user_pref("ui.textSelectAttentionForeground", "#000000"); // Highlight search co
 user_pref("webgl.disabled", false);
 user_pref("webgl.renderer-string-override", " ");
 user_pref("webgl.vendor-string-override", " ");
-user_pref("widget.non-native-theme.gtk.scrollbar.thumb-size", 0.825); // Resize scrollbar. Default: 0.75
+user_pref("widget.non-native-theme.gtk.scrollbar.thumb-size", "0.825"); // Resize scrollbar. Default: 0.75
 user_pref("widget.non-native-theme.scrollbar.style", 2); // Set scrollbar style. Possible value: 0 (default, based on OS), 1-5
