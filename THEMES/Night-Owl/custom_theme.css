@@ -171,8 +171,8 @@ menupopup {
   --firefoxcss-top-bar-border-bottom-size: 0px !important;
 }
 
-/* Add a line seperator between tab bar and web content that disappear when bookmark bar is visible,
- and instead show a line between the bookmark bar and web content */
+/* Add a moving separator between website content and top bar, that changes dynamically based on whether
+ * the tabbar or the bookmark bar is visible*/
 #TabsToolbar {
   position: relative;
 }
