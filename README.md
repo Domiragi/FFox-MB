@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <img alt="Light" src="https://github.com/user-attachments/assets/ef4de394-7fe0-4aee-b852-87d9a59cc70d" width="45%">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="https://github.com/user-attachments/assets/8335fdf5-8949-4536-a566-a44f6875d513" width="45%">
+  <img alt="Light" src="https://github.com/user-attachments/assets/ef4de394-7fe0-4aee-b852-87d9a59cc70d" width="48%">
+&nbsp;
+  <img alt="Dark" src="https://github.com/user-attachments/assets/8335fdf5-8949-4536-a566-a44f6875d513" width="48%">
 </p>
 
 <p align="center">
