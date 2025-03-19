@@ -2,9 +2,20 @@
 
 <p align="center">
 <a href="#page_facing_up-other"><img alt="Version" src="https://img.shields.io/badge/Last%20tested%20Firefox-v136.x-blue?style=flat&logo=firefox&logoColor=white"></a>
-<a href="#shield-last-updates"><img alt="Updated Date" src="https://img.shields.io/badge/Updated-18/03/2025-blueviolet?style=flat"></a>
-<img alt="Created" src="https://img.shields.io/badge/Updated%20since-2020-important?style=flat">
 </p>
+
+<p align="center">
+  <img alt="Light" src="https://github.com/user-attachments/assets/ef4de394-7fe0-4aee-b852-87d9a59cc70d" width="48%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="https://github.com/user-attachments/assets/8335fdf5-8949-4536-a566-a44f6875d513" width="48%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d82013ad-e813-4f6f-9080-4cb5d1829d73" alt="Night Owl Demo" width="70%"/>
+</p>
+
+
+
 
 # About
 This is a personalized fork of Firefox Mod-Blur, and my take on the [VSCode Night Owl theme](https://vscodethemes.com/e/sdras.night-owl/night-owl).
@@ -16,9 +27,9 @@ The project uses Firefox Mod-Blur as the base structure, and have been modified 
 
 The main files for customizing Firefox are `userChrome.css` and `userContent.css`, but you'll see that there are also `userChrome_main.css`, `userChrome_sub.css`, `userContent_main.css`, `userContent_sub.css`. The reason for this is that in the upstream repo, all of the main config codes are written directly in the `userChrome.css` and `userContent.css` files; this makes it really hard to add your own customization because all the custom files are imported at the head of the file, so if you want to make a change you'll to directly modify the content of the file, and that makes it hard to merge changes from upstream if you change it extensively. So I break `userChrome.css` into `userChrome_main.css` and `userChrome_sub.css` where `userChrome_sub.css` contains everything from `userChrome.css` without importing any extra files; that instead is done in `userChrome_main.css` where it imports `userChrome_sub.css` as the first file, then imports all the extra custom files. That way, all the custom changes can be written in the custom files that come after and it will overwrite the codes in the original files without having to directly modify it, and the original `userChrome.css` can be kept to pull changes from upstream. The same is applied to `userContent.css`. Until the upstream repo changes its approach to file structure, I think this is the best way to go about it.
 
-</details>
+The only main config files you need are `userChrome_main.css`, `userChrome_sub.css`, `userContent_main.css`, `userContent_sub.css`; once you copy these files to your `chrome` folder, `userChrome_main.css` and `userContent_main.css` should be renamed to `userChrome.css` and `userContent.css`.
 
-For your use, the only main config files you need are `userChrome_main.css`, `userChrome_sub.css`, `userContent_main.css`, `userContent_sub.css`; once you copy these files to your `chrome` folder, `userChrome_main.css` and `userContent_main.css` should be renamed to `userChrome.css` and `userContent.css`.
+</details>
 
 95% of the customizing comes from the CSS files, the rest are from the use of JavaScript to further extend the capability, most notably the custom [Findbar from uc.css.js](https://github.com/aminomancer/uc.css.js/blob/master/JS/findbarMods.uc.js). Using JavaScript files is totally optional.
 
@@ -44,9 +55,10 @@ If you are unfamiliar with customize Firefox, I strongly advise you to look up w
 # Extra Resources
 - https://www.userchrome.org/ : A good resource on `userChrome.css` and configuring Firefox.
 - https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/ : Guide to enable the Browser Toolbox in Firefox and also disable Popup Autohide so you can inspect elements of the Firefox browser itself.
-- https://firefoxcss-store.github.io/ : A store of community examples of configs from the subreddit [r/Firefoxcss](https://www.reddit.com/r/FirefoxCSS/) and on [Lemmy](https://lemmy.world/c/FirefoxCSS@fedia.io).
+- https://firefoxcss-store.github.io/ : A collection of builds and configs from the Firefoxcss community on [Reddit](https://www.reddit.com/r/FirefoxCSS/) and on [Lemmy](https://lemmy.world/c/FirefoxCSS@fedia.io).
 - https://github.com/aminomancer/uc.css.js/ : Many good codes/information on configuring the internal Firefox system. The owner/maintainer is a developer from Firefox, and many of [his comments in r/Firefoxcss](https://www.reddit.com/r/FirefoxCSS/search/?q=MotherStylus) have been extremely informative.
 - The owl icon is from [G-CAT](https://www.flaticon.com/free-icon/owl_13037142)
+- The font is CommitMono Nerd Font: https://www.nerdfonts.com/font-downloads
 
 <details>
 <summary><h2>TODO </h2></summary>
