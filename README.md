@@ -15,6 +15,7 @@
 </p>
 
 <div style="text-align: justify">
+	
 # About
 	
 This is a personalized fork of Firefox Mod-Blur, and my take on the [VSCode Night Owl theme](https://vscodethemes.com/e/sdras.night-owl/night-owl).
