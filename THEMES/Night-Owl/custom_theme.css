@@ -130,6 +130,10 @@ menupopup {
   /* ========================== Other =============================== */
   --search-box-focus-outline-color: var(--firefoxcss-border-color-highlight) !important;
   --firefoxcss-box-border-radius: 2.6px !important;
+  --uc-bm-autohide-open-duration: 300ms;
+  --uc-bm-autohide-open-delay: 400ms;
+  --uc-bm-autohide-close-duration: 300ms;
+  --uc-bm-autohide-close-delay: 200ms;
 
   /* Fonts: Use custom font family, fallback to a generic monospace font if fail */
   --custom-font: CommitMono Nerd Font, CommitMono Nerd Font Mono, -moz-fixed, monospace;
@@ -175,37 +179,22 @@ menupopup {
 #TabsToolbar:not([customizing])::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 1px;
   left: 0;
   width: 100%;
   height: 1px;
   background-color: var(--firefoxcss-border-color);
-  transition: bottom 300ms ease-in-out 200ms !important;
+  transition: bottom var(--uc-bm-autohide-close-duration) ease-in-out var(--uc-bm-autohide-close-delay) !important;
 }
 #navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #TabsToolbar:not([customizing])::after,
 #navigator-toolbox:has(.bookmark-item[open]) > #TabsToolbar:not([customizing])::after {
-  bottom: calc(0px - (var(--uc-bm-height) + 2*var(--uc-bm-padding)));
-  transition: bottom 300ms ease-in-out 200ms !important;
+  bottom: calc(0px + var(--uc-bm-popout-adjust) - (var(--uc-bm-height) + 2 * var(--uc-bm-padding)));
+  transition: bottom var(--uc-bm-autohide-open-duration) ease-in-out var(--uc-bm-autohide-open-delay) !important;
 }
 
-/* Bookmark bar separator */
-#PersonalToolbar:not([customizing])::after {
-  content: ""; 
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--firefoxcss-border-color);
-  opacity: 0 !important;
-  transition: opacity 300ms ease-in-out 200ms !important;
-}
 
-#navigator-toolbox:hover > #PersonalToolbar:not([customizing])::after,
-#navigator-toolbox:has(.bookmark-item[open]) > #PersonalToolbar:not([customizing])::after {
-  opacity: 1 !important;
-  transition: opacity 300ms ease-in-out 200ms !important;
-}
+/* Fix windows buttons position change caused by setting TabsToolbar's position to relative */
+
 
 /*=====================================================================
 ====================== C O N T E X T   M E N U ========================

@@ -1,29 +1,31 @@
 :root {
   --uc-bm-height: 24px;
   --uc-bm-padding: 6px;
+  --uc-bm-autohide-open-duration: 300ms;
+  --uc-bm-autohide-open-delay: 200ms;
+  --uc-bm-autohide-close-duration: 300ms;
+  --uc-bm-autohide-close-delay: 200ms;
 }
 
 #PersonalToolbar {
-  padding: 0px !important;
   height: 0px !important;
   opacity: 0 !important;
-  transition-property: height, opacity, padding !important;
-  transition-duration: 300ms, 300ms, 0ms !important;
-  transition-delay: 200ms, 200ms, 500ms !important;
-  transition-timing-function: ease-in-out, ease-in-out, ease-in-out !important;
+  transition-property: height, opacity !important;
+  transition-duration: var(--uc-bm-autohide-close-duration), var(--uc-bm-autohide-close-duration) !important;
+  transition-delay: var(--uc-bm-autohide-close-delay), var(--uc-bm-autohide-close-delay) !important;
+  transition-timing-function: ease-in-out, ease-in-out !important;
 }
 
 #navigator-toolbox:hover:not(:has(#urlbar[breakout][breakout-extend]:hover)) > #PersonalToolbar,
 #PersonalToolbar:has(.bookmark-item[open]),
 #navigator-toolbox > #PersonalToolbar:has(.toolbar-menupopup[dragstart]),
 #PersonalToolbar[customizing] {
-  padding: 1px 6px !important;
   height: calc(var(--uc-bm-height) + 2*var(--uc-bm-padding)) !important;
   opacity: 1 !important;
-  transition-property: height, opacity, padding !important;
-  transition-duration: 300ms, 300ms, 0ms !important;
-  transition-delay: 200ms, 200ms, 200ms !important;
-  transition-timing-function: ease-in-out, ease-in-out, linear !important;
+  transition-property: height, opacity !important;
+  transition-duration: var(--uc-bm-autohide-open-duration), var(--uc-bm-autohide-open-duration) !important;
+  transition-delay: var(--uc-bm-autohide-open-delay), var(--uc-bm-autohide-open-delay) !important;
+  transition-timing-function: ease-in-out, ease-in-out !important;
 }
 
 :root[uidensity="touch"] #PersonalToolbar {
@@ -39,3 +41,4 @@
 :root[inDOMFullscreen] #navigator-toolbox {
 	--browser-area-z-index-toolbox: initial;
 }
+

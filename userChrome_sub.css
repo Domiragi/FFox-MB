@@ -169,6 +169,7 @@
   --uc-bm-height: 24px;
   --uc-bm-padding: 6px;
   --uc-bm-margin-bottom: 4px;
+  --uc-bm-popout-adjust: 0px;
 
   /* Fonts: Use custom font family, fallback to a generic monospace font if fail */
   --custom-font: CommitMono Nerd Font, CommitMono Nerd Font Mono, -moz-fixed, monospace;
