@@ -192,10 +192,6 @@ menupopup {
   transition: bottom var(--uc-bm-autohide-open-duration) ease-in-out var(--uc-bm-autohide-open-delay) !important;
 }
 
-
-/* Fix windows buttons position change caused by setting TabsToolbar's position to relative */
-
-
 /*=====================================================================
 ====================== C O N T E X T   M E N U ========================
 =====================================================================*/
