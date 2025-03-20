@@ -133,7 +133,7 @@ menupopup {
   --uc-bm-autohide-open-duration: 300ms;
   --uc-bm-autohide-open-delay: 400ms;
   --uc-bm-autohide-close-duration: 300ms;
-  --uc-bm-autohide-close-delay: 200ms;
+  --uc-bm-autohide-close-delay: 300ms;
 
   /* Fonts: Use custom font family, fallback to a generic monospace font if fail */
   --custom-font: CommitMono Nerd Font, CommitMono Nerd Font Mono, -moz-fixed, monospace;
