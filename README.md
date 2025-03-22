@@ -16,7 +16,7 @@
 
 <div style="text-align: justify">
 	
-# About
+# Description
 	
 This is a personalized fork of Firefox Mod-Blur, and my take on the [VSCode Night Owl theme](https://vscodethemes.com/e/sdras.night-owl/night-owl).
 
@@ -38,7 +38,7 @@ As mentioned this is a personalized fork, so although much of the codes from Fir
 Many thanks to [Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur), on which this entire project is based on, and many thanks to [uc.css.js](https://github.com/aminomancer/uc.css.js) for being a great source of information on how to config the internal system of Firefox. I also want to note [FF-ULTIMA](https://github.com/soulhotel/FF-ULTIMA), a really cool looking project and helped me with minor tweaks here and there.
 
 # Usage/Installation
-If you are unfamiliar with customize Firefox, I strongly advise you to look up what `userChrome.css`, `userContent.css` and `user.js` files are and what they do. https://www.userchrome.org/ is a good resource for that.
+If you are unfamiliar with customizing Firefox, I strongly advise you to look up what `userChrome.css`, `userContent.css` and `user.js` files are and what they do. https://www.userchrome.org/ is a good resource for that.
 
 ## Installation Steps
 1. Enable Firefox to use customization files: Either copy my `user.js` file into your Profile folder, or enable it through `about:config`
