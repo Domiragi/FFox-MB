@@ -2,6 +2,7 @@
 // User: Domiragi
 
 user_pref("accessibility.force_disabled", 1);
+user_pref("accessibility.typeaheadfind", false);
 user_pref("beacon.enabled", false);
 user_pref("browser.active_color", "#EE0000"); // Default color for active links (links currently being clicked on)
 user_pref("browser.active_color.dark", "#FF6666"); // Default color for active links after being opened once
